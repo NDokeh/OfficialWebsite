@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<title> Linux Systems Administration - The Official Website of Ndubuisi 
+
+Okeh
+<meta charset="UTF-8">
+<meta name="description" content="My perspective on Linux Systems Administration">
+<meta name="keywords" content="Ndubuisi Okeh, Jkid, Linux Systems Adminitration, Linux, SysAdmin, documentation, knowledge base, logs, 
+configurations, system resouces, LAMP stack, LAMP, apache,php ,MySQL, servers, CentOS, VirturalBox,">
+</head>
+
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+
+<body>
+
+<p>The purpose of being a Linux Systems Administrator is to optomise, 
+
+<br />manage, and deploy system resources to serve and support 
+
+applications <br />and users. The three tools of any Linux system admin 
+
+are logs, <br />configurations, and documentation.</p>
+<p>Logs are system logs</p>
+<p>Configurations are settings</p>
+<p>And Documentation are Standard Operating Procedures, and knowledge 
+
+base <br />sections that you look up.</p>
+<p>The fourth tool is the command line.</p>
+<p>Installing linux is surpriseling easy. Especially easy if you choose 
+
+to <br />use virtual box, which is a free piece of software. I would 
+
+recommend <br />using CentOS or Ubuntu to practice linux 
+
+administration.</p>
+<p>What ever you do. If anyone suggests that you install gentoo: DON'T. 
+
+<br />JUST SIMPLY DON'T.</p>
+<p>The most common commands for linux would be the following:<br />cd, 
+
+ls, cp, mv, rm,chmod,clear, pdw, kill, ifconfig, grep, find</p>
+
+<p> ---------- </p>
+
+<h>LAMP Stack</h1>
+<p>LAMP isthe foundation of Linux based servers. LAMP servers work 
+
+great <br />with Drupal and Wordpress.<br />Linux - Foundation of a 
+
+LAMP Stack Server<br />Apache - Webserver<br />MySQL - Details to be 
+
+quared by scripting<br />PHP - Web app and PHP and python/perl<br />And 
+
+there are two ways to install a LAMP server. The First one is using <br 
+
+/>taskel and the second one is to install each component of the LAMP 
+
+<br />stack seperately.<br />---------<br />The first one is the taskel 
+
+option, and it's done in three steps<br />sudo apt-get update<br />sudo 
+
+apt-get install tasksel<br />sudo taskel - This step will giove you a 
+
+prompt check for the LAMP <br />server and all you need to do is to 
+
+select "OK"<br />----------<br />Installing Apache, mysql-server<br 
+
+/>sudo apt install apache 2<br />sudo apt install mysql-server <br 
+
+/>sudo apt install php pear php-fpm php-dev zi<br />sudo apt install 
+
+php-curl php-xml rpc<br />Researt server via sudo service apche2 
+
+restart (however the server will <br />restoart automatically)<br 
+
+/>Check apache via https://localhost/<br />check php via two ways<br 
+
+/>1. executing any pp file from within /var/</p>
+<p>or</p>
+<p>2. php -r 'echo" "\n\n Your PHP installation is working fine \n\n
+
+\n"</p>
+</body>
+</html>
