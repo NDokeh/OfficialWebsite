@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Building a home server </title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's tutorial on how to build a Linux home server">
+<meta name="keywords" content="Ndubuisi Okeh, home server, linux server, linux, VPN, git, personal server,WinSCP, personal cloud, ssh, lubuntu,linux command line, CLI, command line, LXDE,IPv4, windows">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+<body>
+
+<p>A personal server is a server you personally control in your own home that only you can access. A personal server can be used as personal storage, a webpage, or a VPN.</p>
+
+<p>When you think of a web server you think of one that is loud, big, and makes a lot of noise. But reality, servers can be small, quiet and can fit the size of a laptop.</p>
+
+<p>Personal servers can be used for your own use or other people you give them the link to. It's essentially a cloud server. Only difference is that unlike the cloud, your data won't go poof.</p>
+
+<p>Personal servers can be done via windows or linux. But I'll use linux as the basics</p>
+
+<p>Creating a linux personal server can be done with a laptop, and with a 250GB hard disk drive. Once installed you need to install WinSCP and MobaXterm, those two will allow to give you direct access to the servers as a user.</p>
+
+<p>Once the system is installed you have several options, you can use it as a streaming server, automated archival server for things you want to download from whole pages to videos and images, a personal VPN, or a personal git server.</p>
+
+<p>1. Install any type of linux OS, like Lubuntu. Why Lubuntu. It has LXDE. It's an extremely light GUI which is the absolute minimum you need for a desktop environment if you're going to use the computer as a server. Basically the lighter, the better. The point is that we want this server to be accessed remotely so that you won't have to touch the server physically again, unless you want to. This will be done via SSH</p>
+
+<p>2. The second step is setting up SSH. After setting up SSH, there will be no need to physically touch the computer. It is also recommended that you do not set up wi-fi as a primary connection, and set up the server as a wired Ethernet connection. It's very important that we install ssh. This will be done by the following command.</p>
+
+<p>sudo apt-get install ssh</p>
+
+<p>3. The next step is to determine the user name to be used, and find out the ip address. As there are two parts of the SSH address: The username and the IPaddress (as in username@ipaddress). The user name used used to set up the Linux address will be the one you will use for the username. The IP address can be found out via ipconfig, and looking at the IPv4 address section: That will be used as the IP.</p>
+
+<p>Using that we will access the server on Windows using PuTTY.</p>
+
+<p>4. Simply download and install PuTTY, and once you installed it, input the server hostname or ip. leave it on port 22, and set the login as ssh Save your session as "first" and press open. </p>
+
+<p>5. Now once you're able to enter the server, you will be able to control the system via linux CLI. </p>
+
+</body>
+</html>

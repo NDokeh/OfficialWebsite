@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Ransomware</title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's view on Ransomware and how to prevent it from happening to companies">
+<meta name="keywords" content="Ndubuisi Okeh, ransomware, technology, tech, adblock, crypto, trojan horse, phishing,Windows, Linux,IT security, IT safety, data, data backup, backup, tombstone mentality, email, gmail ">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+<body>
+<p>Ransomware is the most insidious form of virus known to the computing world. Most ransomware is launched from Russia and Eastern Europe, areas where the US has no extradition treaty.</p>
+
+<p>Ransomware works by via drive by downloads when a person visits a web page, or via a trojan horse like a fake UPS receipt sent to you on Gmail. Once active it begins to encrypt the system via a program that is not easily noticeable unless you go to your task manager or you notice a lot of lag. </p>
+
+<p> Once active, a screen will show up telling you to that your files are encrypted and you have to pay up a ransom via reloadable cards or via cryptocurrency. If a person does not in a certain period of time, the files are locked permanently.</p>
+
+<p> There are two ways avoid Ransomware in this day and age</p>
+
+<ol> 
+    <li>Don't use Windows</li> 
+    <li>Backup everything, manually, and put the data in a separate         non-networked area.</li>
+</ol>
+
+<p> As for one, even though there are plenty of people using linux systems, most corporations are unwilling to transition to linux for various reasons. Primarily because it costs money. So option two has to be done.</p>
+
+<p> Option two is basically manual backups of computer data to be stored in a separate non-networked area. These backups has to be done every week or every two weeks, or every month. Preferably these backups have to be done on a daily basis.</p>
+
+<p> My prefered system is a backup system that is connected via wired ethernet that backups systems on a daily basis. But there's a twist, it's not online and connected all the time, only during business hours or after business hours in a method similar to windows switching off and on the ethernet ports via the control panel.</p>
+
+<p>If a software system like that is actually created, that can save millions or billions of dollars in lost time and productivity. But many companies see IT as a cost center until a ransomware attack happens, then they are willing to pay the ransom because it's easier. </p>
+
+<p> Tombstone mentality ladies and gentlemen.</p>
+
+<p>Worse, since they they see that it's a lot cheaper to pay the ransom than to prevent such a virus from happening, and in almost 99% of the cases, the ransom gets paid they get the data back, it's profitable for people who create ransomware to keep doing it over and over again. Thus, they're exploiting the fact that IT security standards in the US are lax and they're profiting from it. It shows that most companies on the news that get hit by these ransomware viruses do not maintain backup policies because it would be too expensive! But it's not as expensive as paying a ransom.</p>
+
+<p>Another simple and most effective solution is installing adblock on every computer, as ransomware can be downloaded silently as a drive-by-download. Drive-by-downloads can't be detected and oftentimes done via java. Many people should install adblock software anyway because most websites don't do enough to ensure that their ad networks don't allow virus downloads, ransomware downloads, or in some cases fake Windows Blue screen of death pages.</p>
+</body>
+
+</html>
