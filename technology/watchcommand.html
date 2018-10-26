@@ -1,0 +1,30 @@
+<p>The Linux &lsquo;watch&rsquo; command allows you to display the output of a regualr command and update the screen if the output changes.</p>
+<p>&nbsp;</p>
+<p>-d allows changes to be highlighted</p>
+<p>&nbsp;</p>
+<p>-n (#) displats the inveral that would be updated in seconds.</p>
+<p>&nbsp;</p>
+<p>-t turns off display header</p>
+<p>&nbsp;</p>
+<p>-g If a change in output is detected, it will exit command.</p>
+<p>&nbsp;</p>
+<p>Watch will continue to run until its closed by control+c or closing the cli terminal window</p>
+<p>&nbsp;</p>
+<p>(Ctrl + Z is used to suspend a process by sending it the signal SIGSTOP , which is like a sleep signal, that can be undone and the process can be resumed again.)</p>
+<p>&nbsp;</p>
+<p>Examples</p>
+<p>&nbsp;</p>
+<p>1. Directory contents chaning</p>
+<p>&nbsp;</p>
+<p>watch -d ls -la</p>
+<p>&nbsp;</p>
+<p>2. Disk space grown or shrink</p>
+<p>&nbsp;</p>
+<p>watch -d df -h</p>
+<p>&nbsp;</p>
+<p>3. watch -d &lsquo;ls -l | fgrep janis</p>
+<p>&nbsp;</p>
+<p>4. watch -n 60 from</p>
+<p>&nbsp;</p>
+<p>5 watch -g free</p>
+<p>&nbsp;</p>
