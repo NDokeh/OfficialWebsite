@@ -1,0 +1,23 @@
+<p>The file system on a Linux distribution is structured as follows:</p>
+<p>&nbsp;</p>
+<ul>
+<li>bin - this is where essential system programs are kept (comparable to "C:\Windows\System32"). It provides a symbolic link to usr/bin directory</li>
+<li>boot - this is where information necessary to boot Linux is kept (like NTLDR and BOOT.INI in "C:\")</li>
+<li>dev - device files are stored here, Contains logical device names for devices.</li>
+<li>etc &ndash; Administrative and configuration files are stored here. (somewhat comparable to the registry)</li>
+<li>home - non-root users' home directories and files are kept here, (sort of like "C:\Documents and Settings")</li>
+<li>lib - system libraries are stored here, Contains shared libraries such as SMF executables (like .dll files in "C:\Windows\System32")</li>
+<li>lost+found - if your filesystem is damaged, pieces of damaged files are placed here</li>
+<li>media - contains several mount points (more in week 2)</li>
+<li>mnt - a mount point, a Default mount point used to temporarily mount file systems (somewhat like drive letters)</li>
+<li>opt - some "optional" software is stored here</li>
+<li>proc - a "pseudo-filesystem", which provides a window on the running operating system (more in week 4)</li>
+<li>root - root's home directory</li>
+<li>sbin - contains system programs normally only run by root, also contains system admin commands and/or utilities. Used during booting when /usr/bin has not been mounted. (like some .exe files in "C:\Windows\System32")</li>
+<li>srv - server data is kept here</li>
+<li>sys - another pseudo-filesystem</li>
+<li>tmp - where temporary files are created; any user can write to this directory, and are deleted when system is rebooted (comparable to "C:\Windows\Temp")</li>
+<li>usr - UNIX System Resources section, where the vast majority of the system software, OS commands, and documentation lives. (sort of like "C:\Program Files")</li>
+<li>var - information used during system operation is stored here</li>
+</ul>
+<p>&nbsp;</p>
