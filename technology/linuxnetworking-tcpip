@@ -1,0 +1,3 @@
+<p>TCP/IP is defined as Transmission Control Protocol/Internet Protocol. A suite of communications protocol used to connect hosts on the internet. TCP/IP is built in Stacks.  Network Hardware, data packets, protocols for data exchange. TCP/IP is a most common stack.</p>
+
+<p>TCP supports the concept of a connection called three way handshake. The three way handshake of TCP: SYN, SYN-ACK, ACK. The client sends TCP packets over IP and sets TCP flag to SYN. Second packet is sent from server to the client. The packet has two TCP flags. SYN and ACK. Third packet goes from client to server only has the ACK bit set.</p>
