@@ -1,12 +1,41 @@
-<p>The following commands access the built-in documentation:</p>
-<p>&nbsp;</p>
-<p>man (optional section number) &lt;command or topic&gt; - displays the system manual page about that command or topic</p>
-<p>&nbsp;</p>
-<p>info &lt;command or topic&gt; - displays in-depth information (if available) about that command or topic</p>
-<p>&nbsp;</p>
-<p>apropos &lt;command or topic&gt; - displays a list of commands and topics related to the one you are interested in</p>
-<p>&nbsp;</p>
-<p>whatis &lt;command or topic&gt; - displays a list of man pages with the same name as the command or topic you specified</p>
-<p>&nbsp;</p>
-<p>which &lt;command&gt; - displays a list of all commands in your current path with the same name</p>
-<p>&nbsp;</p>
+<p>Many Linux users know about the man command for the manual they’re using for their linux OS where it shows you the command, how it works, and which options you can use for your needs. But there are four other commands you can use to learn about the OS system and their commands.</p>
+
+<p>man (optional section number) <command or topic></p>
+
+<p>To reiterate, the man command is where you have the full documentation for all easily accessible commands. This command displays the system manual page about that command or topic and gives you access to the manual pages for command line utilities and tools. It gives a full description, details, and options of the command or topic you typed in.</p>
+
+<p>Here are four other commands that gives you access to the built-in documentation in your Linux OS.</p>
+
+<p>Info <command></p>
+
+<p>Info reads documentation in the info format. Info displays in-depth information (if available) about that command or topic. Info pages usually give give more detailed information about a command then its respective man pages. It also allows navigation and links between pages as info pages are longer than man pages. Sometimes an info page for a command can be 10 pages long.</p>
+
+<p>The special format that the info pages come from is generated usually from a Texinfo source.</p>
+
+<p>Apropos <keyword></p>
+
+<p>Apropos allows you to search for commands and displays a list of commands and topics related to the one you are interested in.</p>
+
+<p>When you have to search the names and descriptions of all available man pages.</p> 
+
+<p>whatis <command></p>
+
+<p>What is displays a list of man pages with the same name of the command or program you specify. They only provide short, one sentence descriptions of the command available in it.</p> 
+
+<p>which <command></p>
+
+<p>The which command is used to find the location of a command or a program, and displays a list of all commands in your current path with the same name. Usually all programs run from the usr/bin forlder, but in reality a good portion of programs are elsewhere in the OS system.</p> 
+
+<p>Also you can get information for more than one command like so.</p>
+
+<p>which <command> <command> <command></p>
+
+<p>Also using the -d option, it makes the command produce debugging information in output for the benefit in developers.</p>
+
+<p>It’s run as which <program or command> -d</p>
+
+<p>You can also specify multiple programs in the same command. It will give you the exact location of the programs you typed in. And you can also get which to give you all the locations of the program or command using which -a after you type in which and the command you want to search for.</p>
+
+<p>which <program or command> -a</p>
+
+<p>The which command is useful if a program you’re trying to run is not running and there’s a possibility that it’s installed in the wrong path or you want to find a command to attach to a bash or python script path.</p>
