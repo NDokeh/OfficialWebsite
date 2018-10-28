@@ -1,9 +1,13 @@
-<p>First use a ping command.</p>
+<p>The first step to test basic connectivity on a server is to use the ping command.</p>
+
+<p>ping [insert hostname or ip]</p>
 
 <p>ping sends a simple ICMP packet to the system you name until you stop with a Control+C key combo. The number of tests can be limited with a -c(#) option.</p>
 
 <p>Example: ping -c 5 hostname</p>
 
-<p>Then use traceroute, which sends a series of 3 test packets to each computer between your system and a specified target system.</p>
+<p>The next step is to use the traceroute command, which sends a series of 3 test packets to each computer, between your system and a specified target system. Like so:</p>
 
-<p>Example traceroute -n 10.1.0.4</p>
+<p>traceroute -n 10.1.0.4</p>
+
+<p>If you are able to receive a connection from the system you're testing, it's good to go. If not, preform your standard troublshooting protocols.</p>
