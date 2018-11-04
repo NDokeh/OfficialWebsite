@@ -1,0 +1,92 @@
+<p>Amazon Web Services: A Web Manual</p>
+<p>&nbsp;</p>
+<p>AWS is a form of cloud computing. Cloud computing is the on-demand delivery of computer power, database storage, application and other IT resources through a cloud services platform via the internet with pay as you go pricing.</p>
+<p>&nbsp;</p>
+<p>The Cloud Computing model has three models:</p>
+<p>&nbsp;</p>
+<p>IaaS: Infrastructure as a Service. The basic building blocks for Cloud. It&rsquo;s a form of cloud computing that provides virtualized computing resources over the internet.</p>
+<p>&nbsp;</p>
+<p>PaaS: Platform as a Service. The underlying infrastructure, usual hardware and operating system.</p>
+<p>&nbsp;</p>
+<p>And SaaS: Software as a Service: Completed product that is run and managed by the service provider. Mostly refers to end&mdash;user apps.</p>
+<p>&nbsp;</p>
+<p>There are three cloud computing deployment models:</p>
+<p>&nbsp;</p>
+<p>Cloud &ndash; Which is fully deployed in Cloud</p>
+<p>&nbsp;</p>
+<p>Hybrid &ndash; Part Cloud and on premises. Connecting Infrastructure and Apps together.</p>
+<p>&nbsp;</p>
+<p>On premises- Fully on premises. Creating their own cloud (Private), via Virtualization</p>
+<p>&nbsp;</p>
+<p>AWS is also Serverless Computing. Serveless Computeing allwos you to build and run applications and services without thinking about servers. It's also referred to Functions as a Services or FaaS or Abstracted Services.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: underline; -webkit-text-decoration-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"> Launching a Linux Virtual Machine</span></p>
+<p>&nbsp;</p>
+<ol>
+<li style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> Open the amazon Ec2 console and click Launch Instance to create and configure your virtual machine</span></li>
+</ol>
+<p>&nbsp;</p>
+<ol start="2">
+<li style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> In the Launch Interface Wizard, it will allow you to help configure and launch your instance. There are several steps. </span></li>
+</ol>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">The first one will allow you to choose a amazon machine image from a list of several server types. Such server types include Amazon Linux, Red Hat Enterprise Linux 7, Suse Linux Enterprise Server, Ubuntu Server, MS Windows Server 2012, a database instance called Amazon RDS and Windows Server 2012 R2 with SQL server express. These instance types comprise of varying combinations of CPU memory, storage, and networking capacity so you can choose the appropriate mix for your applications. </span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">For more information just click on which one you want and it will show the information you can see. Each one includes and OS and can include application and application servers</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">After you select a instance server, you can choose an instance type. Instance types comprise of variating combinations of CPU memory, storage, and networking capacity so you can choose the appropriate mix for your applications.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">There should be a default option of nts.micro. The instance type is covered within the Free Tier and offers enough computer capacity to tackle simple workloads.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Then you can review the configuration, storage ,tagging, and security settings that have been selected for your instance. While you have the option to customize these settings, we recommend accepting the default values for this tutorial.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">On the next screen you will be asked to choose an existing key pair or to create a new key pair, A key pair is used to securely access your Linux instance using SSH. AWS stores the public part of the key pair which is just like a house lock. You can download and use the private part of the key pair which is just like a house key.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">First selected create a new key pair, and give it the name MykeyPair. Next click the download key pair button.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">After you download the mykeypair key, you have to store the key in a secure location. If you lose this key, you will not be able to access your instance. If someone else gets access to your key, they will one able to access your instance.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Windows and Mac</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">For windows, we recommend svin</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">After you have stored your key pair, click Launch Instance to start your Linux instance.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Then you will see a page with a option of view instance. Click view instance on the next screen to view your instances, and see the asatsu of the instances you have just started.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">In a few minutes. The instance state colum on your instance will change to running and a public ip address will be shown. You can refresh these instance State columns by pressing the refresh button on the right just above the table. Copy the Public IP address of you&rsquo;re AWS instance, so you can use it when we connect to the instance via SSH</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Step 3: Connect to your instance.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">After launching your instance, it's time to connect to it using SSH.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Step one: Download Git for Windows here. Run the installer and accept the default settings . And this will install git bash and git.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Second, right click on your desktop and select git bash here to open a git bash command prompt.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Then use SSH to connect to your instance. In this case the user name ius ec2-user. The ssh key is stored in the directory we saved it to in step 2 part d, and the IP address is from step 2 part f. The format is </span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ssh -i {full path of your .pem file} ec2-user@{instance IP address}</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">You will see a response similar to the following confirming that the authenticity of host can't be established. RSA key fingerprint Are you sure you want to continue connecting (yes/no)</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Type yes and press enter</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">You will then see a response similar to the following. Warning: permanently added blank to the list of known hosts</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">You should then see the welcome screen for your instance and you are now connected to your AWS Linux Virtual machine in the cloud.</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Step four terminate your instance</span></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">You can easily terminate the instance from the EC2 console. In fact it is a best practice to terminate instances you are no longer using so you don't keep getting charged for them.</span></p>
+<p>&nbsp;</p>
+<ol>
+<li style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> Back on the EC2 console, select the box next to the instance you created. The click the actions button, navigate to instance state and click terminate.</span></li>
+</ol>
+<p>&nbsp;</p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Be advised that this can take several seconds to complete. Once your instance has been terminated, the instance state will change to terminated to our EC2 console.</span></p>
+<p><br /><br /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
