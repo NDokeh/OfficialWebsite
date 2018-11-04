@@ -1,0 +1,150 @@
+<p>Important things about Linux Security:</p>
+<p>&nbsp;</p>
+<ol>
+<li>
+<p>Never use unencrpted passwords for anything, especially under telnet or FTP. If you have to remember one thing: NEVER SU over a telnet session</p>
+</li>
+<li>
+<p>If you must share files across the internet use SFTP</p>
+</li>
+<li>
+<p>Don't use any RPC services. They have masive security holes.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p>Some good things:</p>
+<p>&nbsp;</p>
+<ol>
+<li>
+<p>Don't even let someone know you exist if you don't have to (ie., don't answer ICMPs, especially broadcasts, don't run a finger or NIS server for external consumption, etc.)</p>
+</li>
+<li>
+<p>Don't run any software unless you really need it.</p>
+</li>
+<li>
+<p>Make sure that your software and OS is current. While most exploits are fixed as soon as they are discovered (at least in the UNIX community), unless you have installed the relevant fixes you are still vulnerable.</p>
+</li>
+<li>
+<p>Restrict access to specific IP addresses or ranges of addresses whenever possible. Many services have the capability to restrict service to a set of static IP addresses (see, for example, /etc/hosts.lpd, /etc/lpd.perms, /etc/hosts.allow, /etc/hosts.deny, /etc/smb.conf, /etc/nwserv.conf, /etc/httpd/httpd.conf).</p>
+</li>
+<li>
+<p>It is also possible to implement all of those restrictions via firewall commands. The down side to that is a little more overhead, the up side is that all of your restrictions are implemented in one place which is iptables</p>
+</li>
+<li>
+<p>Keep web, e-mail, file service on separate servers (with unrelated root passwords). That way if one is breached, the rest will still be safe.</p>
+</li>
+<li>
+<p>Never use root when you don't have to. Log in as an ordinary user, su to root when necessary, and then exit as soon as possible. You'll get a little more practice typing in the root password, but you won't accidentally cause as much harm if you do something wrong.</p>
+</li>
+<li>
+<p>Backup frequently, using multiple generations and offsite storage. This can be done via Hard Drives, Tapes, and via the Cloud. I recommend backing up once every 2 or three days, with weekly backups and monthly backups as a insurance policy.</p>
+</li>
+<li>
+<p>Instead of using startx, use startx -- -nolisten tcp ( X automatically listens on tcp port 6000, but it is configured to not accept any connections, but knowing of the existence of a PC, ie., through a port scan, is the first step in hacking into it).</p>
+</li>
+<li>
+<p>Know how to use /etc/services to identify port numbers. Particular ports of interest are:</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p>22 - Secure Shell (SSH)</p>
+<p>25 - Simple Mail Transfer Protocol (SMTP)</p>
+<p>53 - Domain Name Server (DNS)</p>
+<p>80 - HyperText Transfer Protocol (HTTP)</p>
+<p>123 - Network Time Protocol (NTP)</p>
+<p>137 - NetBios Name Service (NBNS)</p>
+<p>138 - NetBios Datagram Service</p>
+<p>139 - NetBios Session Service (NBSS)</p>
+<p>143 - Internet Message Access Protocol (IMAP)</p>
+<p>161 - Simple Network Management Protocol (SNMP)</p>
+<p>194 - Internet Relay Chat Protocol (IRC)</p>
+<p>220 - Internet Message Access Protocol v3 (IMAP3)</p>
+<p>389 - Lightweight Directory Access Protocol (LDAP)</p>
+<p>443 - HTTP over Secure Socket Layer (SSL) (HTTPS)</p>
+<p>445 - Microsoft DS</p>
+<p>515 - Print Spooling (LPD)</p>
+<p>636 - LDAP over SSL (LDAPS)</p>
+<p>6000-6063 - X Windows</p>
+<p>&nbsp;</p>
+<p>Here are all the remaining ports of interest as well along with the TCP and UDP type in brackets. Some of them may be repeats, so I apologize in advance.</p>
+<p>&nbsp;</p>
+<p>20 &ndash; FTPdata [TCP]</p>
+<p>21 &ndash; FTP [TCP]</p>
+<p>22 &ndash; SSH [TCP]</p>
+<p>23 &ndash; Telnet [TCP]</p>
+<p>25 &ndash; SMTP [TCP]</p>
+<p>53 &ndash; DNS [TCP and UDP]</p>
+<p>67 &ndash; DHCP [UDP]</p>
+<p>80 &ndash; HTTP [TCP]</p>
+<p>110 &ndash; POP3 [TCP]</p>
+<p>111 &ndash; Portmapper [TCP and UDP]</p>
+<p>113 &ndash; auth/ident [TCP]</p>
+<p>143 &ndash; IMAP [TCP]</p>
+<p>389 &ndash; LDAP [TCP]</p>
+<p>443 - HTTP over SSL</p>
+<p>119 -NNTP [TCP]</p>
+<p>69 &ndash; TFTP [UDP]</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>11. Read the Mandiant report on APT1. Which you can view here: <a href="https://www.fireeye.com/content/dam/fireeye-www/services/pdfs/mandiant-apt1-report.pdf">https://www.fireeye.com/content/dam/fireeye-www/services/pdfs/mandiant-apt1-report.pdf</a>. While it&rsquo;s a full detailed report on the Chinese&rsquo;s Militaries Cyber Warfare Unit Unit 61398. But it gives a lot more information of the ways people and organizations can breach your servers. And it can be done via the most simplist of vectors. Mainly human.</p>
+<p>&nbsp;</p>
+<p>Because most common danger comes not from technology but from human fallibility and error. This is what cyber security experts call "social engineering" or "spear-phishing", the most successful ruse used by hackers attempts to entice users into reading and acting on e-mails with links to malware.</p>
+<p>&nbsp;</p>
+<p>Several things can be done to fight these methods:</p>
+<p>&nbsp;</p>
+<p>12. Educate your users never to click on links in e-mails. Browsers which display URLs in the status bar can be useful in showing your users that the link they want to click is not the URL displayed in the e-mail.</p>
+<p>&nbsp;</p>
+<p>13. Train your users not to open attachments in e-mails; if they must transfer files, they can transfer files using secure FTP or shared file space.</p>
+<p>&nbsp;</p>
+<p>14. Configure mail clients to not execute scripts or run plugins.</p>
+<p>&nbsp;</p>
+<p>15. Configure firewall output on all ports that are not specifically necessary for users to do their jobs.</p>
+<p>&nbsp;</p>
+<p>How to tell if your server has been compromised:</p>
+<p>&nbsp;</p>
+<ol>
+<li>
+<p>Keep an md5sum for every critical file on your system, and check them periodically.</p>
+</li>
+<li>
+<p>Often a simple check like ls -l /bin will show that some binaries have been modified since you installed your system.</p>
+</li>
+<li>
+<p>If an ls -al of / or one of the top level directories shows a hidden directory, it may be part of a rootkit which the hacker has installed on your system to facilitate his work.</p>
+</li>
+<li>
+<p>Usually a hacker will remove traces of his intrusion from your log files, and will install versions of binaries such as ls, ps and netstat which will hide his tracks.</p>
+<p>&nbsp;</p>
+</li>
+</ol>
+<p>What to do if your sever has been breached or compromised:</p>
+<p>&nbsp;</p>
+<p>The entire system has to be reinstalled, it&rsquo;s the only way to be sure. You may be able to find and fix a couple of things that have been touched, but there are whole host of things which may not be found for a long time, if at all. Many times, the programs which come out of a rootkit make it impossible to clean up without reformatting.</p>
+<p>&nbsp;</p>
+<p>So the things to do are:</p>
+<p>&nbsp;</p>
+<ol>
+<li>
+<p>Unplug the system from all network connections;</p>
+</li>
+<li>
+<p>Save all of your data (and verify that the saved data has not been compromised);</p>
+</li>
+<li>
+<p>Re-install the system from scratch;</p>
+</li>
+<li>
+<p>Learn from what happened to implement measures to prevent this from happening again (see above).</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p>If you kept regualar backups or images of your OS, this should not be a problem. Do step one and skip to step 3.</p>
+<p>&nbsp;</p>
+<p>Privacy is difficult on today's Internet. Everyone must make decisions about how private they want to be; you can't have a large Facebook, Google, or LinkedIn presence and expect any privacy. But there are a few things you can do that will help:</p>
+<p>&nbsp;</p>
+<ol>
+<li>
+<p>Do not accept third-party cookies in your browser.</p>
+</li>
+<li>
+<p>Clear your cookies frequently, preferably every day or every week.</p>
