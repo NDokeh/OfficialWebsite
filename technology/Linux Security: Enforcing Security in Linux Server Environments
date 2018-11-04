@@ -1,0 +1,76 @@
+<p>Enforcing security in server environments</p>
+<p>&nbsp;</p>
+<p><strong>Restricting Access to files</strong></p>
+<p>&nbsp;</p>
+<p>This can be done granting permission to read or write a file, to view a directory or to execute a program to only those users allowed to do so; for instance, access to a payroll database is restricted by only allowing users in a Payroll Department of a company to access the database files, and the ability to ping on the network is controlled by allowing only Networking Department personnel of a company to execute the ping program on their own computers and systems.</p>
+<p>&nbsp;</p>
+<p><strong>Policy Enforcement</strong></p>
+<p>&nbsp;</p>
+<p>A Security policy is established for each action, defining who can perform it; ie., it should not be possible via telnet to login as root (since telnet does not know how to encrypt passwords)</p>
+<p>&nbsp;</p>
+<p>Linux OS&rsquo;s can use both means, but the former which is restricting access to files is much more widespread; Windows uses predominantly the latter which is policy enforcement. Both methods are made somewhat easier to administer by grouping users and enforcing security based on group membership.</p>
+<p>&nbsp;</p>
+<p>Three files are used for user and group security in Linux operating systems:</p>
+<p>&nbsp;</p>
+<p>/etc/group - a list of the groups and the users in them;</p>
+<p>&nbsp;</p>
+<p>/etc/passwd - a list of the users, their initial groups, home directories and shells; and</p>
+<p>&nbsp;</p>
+<p>/etc/shadow - like /etc/passwd, but containing encrypted passwords as well; /etc/passwd must be readable by any user, since it is used to translate numeric user ids into names, but shadow is only readable by root.</p>
+<p>&nbsp;</p>
+<p>passwd and group files can be maintained in a consistent fashion across multiple servers using NIS (the Network Information Service).</p>
+<p>&nbsp;</p>
+<p>Suppose that a system administrator wants to allow only his network support people to be able to use ping. (S)He might proceed as follows:</p>
+<p>&nbsp;</p>
+<p>1. Both before and after the next 3 steps, do the following:</p>
+<p>&nbsp;</p>
+<p>cat /etc/passwd</p>
+<p>&nbsp;</p>
+<p>cat /etc/group</p>
+<p>&nbsp;</p>
+<p>and finally</p>
+<p>&nbsp;</p>
+<p>cat /etc/shadow.</p>
+<p>&nbsp;</p>
+<p>Note which files change after each command, and what the changes entail. Use useradd (and passwd!) to create user accounts (if they do not already exist) for the network support people:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>useradd -m john ; passwd john</p>
+<p>&nbsp;</p>
+<p>Use groupadd to create a group called &ldquo;networking&rdquo;:</p>
+<p>&nbsp;</p>
+<p>groupadd networking</p>
+<p>&nbsp;</p>
+<p>Note that some predefined groups are there to control access to hardware capabilities. For instance, you must be a member of the group audio to access the sound card.</p>
+<p>&nbsp;</p>
+<p>Use usermod to put the users in the networking group (note that the -G option requires that ALL groups of which the user is a member be listed, and that the -G option precedes the user name):</p>
+<p>&nbsp;</p>
+<p>usermod -G networking,john john</p>
+<p>&nbsp;</p>
+<p>Note that at this point, the stage has been set, but no enforcement will take place because no permissions have been specified.</p>
+<p>&nbsp;</p>
+<p>In case you make any mistakes, it might be useful to know the following: to delete a user, use the userdel command; likewise, to delete a group, use the groupdel command.</p>
+<p>&nbsp;</p>
+<p>Both before and after the next 2 steps, do the following: ls -l /bin/ping. Note the changes after each command.</p>
+<p>&nbsp;</p>
+<p>In our distribution, the root filesystem is normally read-only. In order to execute the next two commands, it is necessary to</p>
+<p>&nbsp;</p>
+<p>mount -wo remount /</p>
+<p>&nbsp;</p>
+<p>Use chgrp on the ping program to specify that it belongs to the networking group:</p>
+<p>&nbsp;</p>
+<p>chgrp networking /bin/ping</p>
+<p>&nbsp;</p>
+<p>Use chmod to specify that only users belonging to the group may execute the program:</p>
+<p>&nbsp;</p>
+<p>chmod 4550 /bin/ping</p>
+<p>&nbsp;</p>
+<p>Now make the root filesystem read-only once again by</p>
+<p>&nbsp;</p>
+<p>mount -ro remount /</p>
+<p>&nbsp;</p>
+<p>In most instances, a Linux system administrators will not enforce security on a file by file basis. Instead, all of the files needed by a specific group (but to be protected from users outside the group) will be placed in a single directory, and access will be controlled via directory permissions.</p>
+<p>&nbsp;</p>
+<p>The implementation and maintenance of a user and group structure is a design problem whose scope can only be appreciated by someone who has experience in inheriting servers which has a tangled mess of users and groups and does not adequately control security of system resources and files. It cannot be stressed strongly enough that the design of a useful and flexible group structure requires careful forethought and more than a little luck, and when ad hoc changes are made for the sake of convenience or time-saving or cost-cutting measures, security can and will be compromised quickly and effectively internally and externally.</p>
+<p>&nbsp;</p>
+<p>Most systems administrators will keep all of the commands needed to set up their user and group structure in one or more scripts, to facilitate rebuilding the server, and to make it easier to keep track of what is already in place when making changes.</p>
