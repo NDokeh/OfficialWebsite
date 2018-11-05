@@ -31,6 +31,9 @@
 
 <p>------------------------------------------------------------</p>
 
+<p>TCP Flags for packets: URG, ACK, PSH, RST, SYN, FIN</p>
+
+<p>---------------------------------------------------------------</p>
 <p>Tools for troubleshooting network issues.</p>
 
 <p>dladm - to administer data links</p>
@@ -57,13 +60,22 @@
 
 <p> Networking addresses consists of the followng: Network hardware address, numeric IP addresses, Media access control, and text based hostnames.</p>
 
-<p>Host and networks:</p>
+<p>------------------------------------</p>
+<p>Hosts and networks:</p>
 
 <p>Classes and Octet Range:</p>
 <p>A 0 - 126 </p>
 <p>B 128 - 192.167</p> 
 <p>C 192.169 - 223</p>
 
+<p>Never put a single 0 in any part of a ip addrss unless accompanied with a 1- i.e. 10 or 100/1.x.or 1xx</p>
+
+<p>Network types:</p>
+<p>Class A xxx.xxx.xx.xx</p>
+<p>Class B xxx.xx.x.x</p>
+<p>Class C xxx.xxx.x.xxx</p>
+
+<p>The third part of the IP address determines the network location of the IP.</p>
 <p>------------------------</p>
 
 <p>pinging ports via nmap. Nmap is the security auditors best friend.</p>
@@ -77,3 +89,18 @@
 <p>How Does DCHP Work?</p>
 
 <p>Dynamic Host Config Protocol. DHCP works by assigning different IP addresses to a device or a network.</p>
+
+<p>-----------------------------------------------------</p>
+
+<p>iptables is a very powerful firewall built into linux. Iptables, ables you with the ability to manage all connection active in and out of each server. Rules are based on chains.</p>
+
+<p>INPUT – Packet destined to locak sockets</p>
+<p>OUTPUT – Packets being routd through the box</p>
+<p>FORWARD – for locally geerated packets</p>
+
+<p>You maintain the ability to do the following with packets using iptables:</p>
+<p>ACCEPT – A firewall rule that speciffice criteria for a packet ad target. This one allows the packet to go through.</p>
+<p>DROP – drop the packet on the floor</p>
+<p>REJECT - reject the packet from the system, return it to sender</p>
+
+
