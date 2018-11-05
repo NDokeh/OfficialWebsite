@@ -1,0 +1,19 @@
+<p>For any Linux systems administrator, one of your major responsiblities is to make sure that data including files and folders are avilable at all times. To this end, they have to adhire to the CIA Triangle. Not to be confused with the US Central Inteliigence Agency.</p>
+
+<p>The CIA Triangle stands for:</p> 
+
+<p><b>C</b>onfidentiality of Data:Sensitive information must be available only to a set of pre-defined individuals.
+Unauthorized transmission and usage of information should be restricted. For example,
+confidentiality of information ensures that a customer's personal or financial information is not
+obtained by an unauthorized individual for malicious purposes such as identity theft or credit
+fraud.</p> 
+
+<p>Data <b>I</b>ntegrity:Information should not be altered in ways that render it incomplete or incorrect.
+Unauthorized users should be restricted from the ability to modify or destroy sensitive
+information.</p>
+
+<p>and <b>A</b>vailability of Data:Information should be accessible to authorized users any time that it is needed.
+Availability is a warranty that information can be obtained with an agreed-upon frequency and
+timeliness. This is often measured in terms of percentages and agreed to formally in Service Level Agreements (SLAs) used by network service providers and their enterprise clients.</p>
+
+<p>The order of importance is Availability, Intergirty and Confidentiality, or AIC Because if data can not be accessed or available, it’s useless.Meaning that if it can't be accessed by anyone, it means it can be compromised or exposed internally or external reasons.</p>
