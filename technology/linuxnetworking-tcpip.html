@@ -1,3 +1,79 @@
 <p>TCP/IP is defined as Transmission Control Protocol/Internet Protocol. A suite of communications protocol used to connect hosts on the internet. TCP/IP is built in Stacks.  Network Hardware, data packets, protocols for data exchange. TCP/IP is a most common stack.</p>
 
+<p>The OSI model or Open Systems Interconnections model is how the layers of TCP/IP stack is organized. The OSI model is the following</p>
+
+<p>1: Physical </p>
+<p>2: Databook</p> 
+<p>3: Network </p> 
+<p>4: Transport </p>
+<p>5: Session </p>
+<p>6: Presentation </p>
+<p>7: Application </p>
+<p>8: Soft Skills</p>
+
+<p>The networking layer of OSI is affeced when a ISP is found to be blocking UDP traffic from a souce host.</p>
+
+<p>1-4 are Data Transport Layers, while 5-7 are Application Layers. </p>
+
+<p>The TCP/IP devides these into the following: 1-2 Data Link/wirelink, 3 Internet/Ethernet, 4 Transport, 5-7 as Application/TCP/UDP layer. As TCP/IP is built in stacks.</p>
+
+<p>TCP/IP also has the following:</p>
+
+<p>ICMP: Internet Control Message Protocol - used for error messages seen on the internet such as "404 Not Found" or "403 Forbidden".</p> 
+  
+<p>UDP: User Datagram Protocol - used for DNS + NFS and streaming media.</p> 
+
+<p>TCP: Tranmission Control Protocol - SMTP, FTP, and HTTP are built on top of TCP</p>
+
+<p>------------------------------</p>
+
 <p>TCP supports the concept of a connection called three way handshake. The three way handshake of TCP: SYN, SYN-ACK, ACK. The client sends TCP packets over IP and sets TCP flag to SYN. Second packet is sent from server to the client. The packet has two TCP flags. SYN and ACK. Third packet goes from client to server only has the ACK bit set.</p>
+
+<p>------------------------------------------------------------</p>
+
+<p>Tools for troubleshooting network issues.</p>
+
+<p>dladm - to administer data links</p>
+
+<p>traceroute - for displaying the route and measurng transit delays of packets across a ip network</p>
+
+<p>snoop - monitor the state of data transfers. Can be used only by the root user</p>
+
+<p>netstate - print ntwork connections, routing, tables, interface stats</p>
+
+<p>ping or usr/sbin/ping- test the ability of source PC to reach a destination comouter</p>
+
+<p> dig - domain information grouper: network admin command linetool for querying DNS servers.</p>
+
+<p>Nslookup - used to obtain domin name or IP address mapping or for any other specfic DNS record.</p>
+
+<p>iw config -command for wireless networking interfaces</p>
+
+<p>ipaddr - shows information for all addresses</p>
+
+<p>The network stack consits of the following: Network Hardware, data packets, protocols or data exchange. Modern network soperate on chuncks of fata caled packets.</p>
+
+<p>-----------------------------------</p>
+
+<p> Networking addresses consists of the followng: Network hardware address, numeric IP addresses, Media access control, and text based hostnames.</p>
+
+<p>Host and networks:</p>
+
+<p>Classes and Octet Range:</p>
+<p>A 0 - 126 </p>
+<p>B 128 - 192.167</p> 
+<p>C 192.169 - 223</p>
+
+<p>------------------------</p>
+
+<p>pinging ports via nmap. Nmap is the security auditors best friend.</p>
+
+<p>Nmap -p 80 hostnamedotcom</p>
+
+<p>-p represents the specifc port option, 80 represents the port to inspect and the hostname s the hostname</p>
+<p>------------------------------</p>
+<p>Linux networking commands: iptables, sockets, routing, drivers</p>
+<p>-----------------------</p>
+<p>How Does DCHP Work?</p>
+
+<p>Dynamic Host Config Protocol. DHCP works by assigning different IP addresses to a device or a network.</p>
