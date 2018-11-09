@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Lin Sec 101: Reducing security risks in Linux Server environments</title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's Text Tutorial on how to reduce security risks in Linux servers">
+<meta name="keywords" content="Ndubuisi Okeh, tutorial, linux, security, linux security, server environments, ip forwarding, patching, patches, root,
+system administration, ftp, linux services, tcp">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+
+<p><strong>Lin Sec 101: Reducing security risks in Linux Server environments</strong></p>
+<p>&nbsp;</p>
+<p>Apply recommended patches such as bug fixes and security patches as soon as you find out about them.</p>
+<p>&nbsp;</p>
+<p>If have unused services, disable them. Programs and services that should be disabled if no one uses them are NFS,NIS,Apache,sendmail,SNMP,Printer,Internet based services.</p>
+<p>&nbsp;</p>
+<p>3. Disable inet services and use ssh for remote login and file transfers. Telnet, ftp, rlogin are less secure.</p>
+<p>&nbsp;</p>
+<p>4. One network tweak you can try is disable IP forwarding.</p>
+<p>&nbsp;</p>
+<p>5.Restrict root access to those logged in via the console.</p>
+<p>&nbsp;</p>
+<p>6. If you have users that have not logged in in a long time, remove them completely.</p>
+<p>&nbsp;</p>
+<p>7. Access to cron should be restricted from normal users and only be usable by system administrators.</p>
+<p>&nbsp;</p>
+<p>8. Disable .rhosts file/service</p>
+<p>&nbsp;</p>
+<p>7. Sysadmins should set warning banners in /etc/motd and/or /etc/issue. They should remind users about system security, and preventing systems from being infected with viruses.</p>
+<p>&nbsp;</p>
+<p>8.Increase the level of logging in system accounting, process accounting, kernal level auditing via scripts and cron. This can be done by creating monitoring scripts to be run automatically via crontab. You can also send emails to be sent automatically when you run a script.</p>
+<p>&nbsp;</p>
+<p>9. Restrict ftp to all users by creating /etc/ftpd/ftpusers to prevent use of the ftp system/service.</p>
+<p>&nbsp;</p>
+<p>10.Remove the group writable permission from all files in /etc and /home. This can be done by the following command # chmod -R g-w /etc and # chmod -R g-w /home</p>
+<p>&nbsp;</p>
+<p>11.If you don't use certain Linux services, disable them.</p>
+<p>&nbsp;</p>
+<p>12. Restrict access to TCP based network services by using TCP wrappers</p>
+</html>
