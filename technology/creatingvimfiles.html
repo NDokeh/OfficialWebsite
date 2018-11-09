@@ -1,3 +1,16 @@
+
+<html>
+
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Creating vim files easily </title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's Text Tutorial on how to create vim files quickly">
+<meta name="keywords" content="Ndubuisi Okeh, tutorial, vim, files, script, linux, crontab,bash, text editor, unix,   ">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+
 <p>How to write a script in vim.</p>
 
 <p>Vim is one of the most powerful text editors in linux/unix. But it has a unique control scheme that is bewildering for most users. But there is a way to create text notes and scripts in vim.</p>
@@ -16,4 +29,54 @@
 
 <p>It's worth noting that once you create a file, the permissions will default to chmod 644 (and for directories to chmod 755) So what we need to do is to change the file permissions where you can run or execute the script. To do so, type in "chmod 744 [scriptname].py or .sh" to make it an executiable file.</p>
 
-<p>Finally, you can run the script by typing in ./[scriptname].sh or you can move the script to a cron file to run it automatically.</p>
+<p>Finally, you can run the script by typing in ./[scriptname].sh or you can move the script to the crontab to run it automatically.</p>
+  
+<b>Adding a script via cron.</b>
+
+<p>You can then place the scripts to be ran automatically via the cron service. This is where all the automation of linux servers take place. </p>
+
+<p>The crontab file can be found in /var/spool/cron/crontabs/ or /var/spool/cron.</p>
+
+<p>An example of a cron tab entry is this</p>
+
+<p>30 18 * * * rm /home/someuser/tmp/*</p>
+
+<p>This means the temp file of someone's user will be removed every day at 6:30pm.</p>
+
+<p>Cron entries look like the following:</p>
+
+<p>* * * * * [commandor/script]</p>
+
+<p>I will explain it further via the following:</p>
+
+<p>(1) 2 3 4 5 [command script]</p>
+
+<p>(1) represents the minute (0-60), 2 represents that hour (1-24, which is based on the international/military time system). And that for tasks that will be done daily.</p>
+
+<p>(3) day you want the task to be done on a which day of the month (1-31), and (4) represents that certain month you want the task to be done (1-12). </p>
+
+<p>(5) Represents the day of the week you want the task to be done (0 for sunday through 6 for Saturday)</p>
+
+<p>Also you can use @reboot before the actual script you type into the file to have the script or command run when it finishes rebooting.</p>
+
+<p>To actually edit the cronttab file enter crontab -e then type in the crontab entry as formatted above in the syntax.</p>
+
+<p>Or even better:</p>
+
+<p>You can easily add tasks to crontab by doing the following</p>
+
+<p>[time syntax] [command or script] | crontab</p>
+
+<p>To open the cron editor, or create one if it does not exist already enter the following</p>
+
+<p>crontab -e</p>
+
+<p>To list the tasks type in the following</p>
+
+<p>crontab -l </p>
+
+<p>to remove the crontab file type in</p>
+
+<p>crontab -r</p>
+
+  
