@@ -1,1 +1,75 @@
+<html>
 
+<head>
+<title> Technology -Linux -How to Check Memory -The Official Website of Ndubuisi Okeh </title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's page on how to check memory on Linux based systems via the command line">
+<meta name="keywords" content="Ndubuisi Okeh, Jkid, Linux Systems Adminitration, Linux, SysAdmin, Technology, free, memory, checking memory, how to check memory,vmstat, free, top, meminfo, command line, system monitoring">
+</head>
+
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+<body>
+<p>How to check memory</p>
+<p>There are several ways to check memory of a linux server. There are meminfo, top, vmstat, and free.</p>
+<p><strong>cat /proc/meminfo</strong></p>
+<p>The first is cat /proc/meminfo. Meminfo will show you everything about memory status of the Linux server in raw data. Total memory, free memory, available memory, buffers, cache, active and inactive.</p>
+<p>The below information is an example of what you will see when you use meminfo.</p>
+
+<pre class="western"><span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">MemTotal:         594900 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">MemFree:           64500 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">MemAvailable:     316728 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Buffers:           49568 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Cached:           262412 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">SwapCached:            0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Active:           258940 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Inactive:         144904 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Active(anon):      92296 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Inactive(anon):      428 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Active(file):     166644 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Inactive(file):   144476 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Unevictable:           0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Mlocked:               0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">SwapTotal:             0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">SwapFree:              0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Dirty:                12 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Writeback:             0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">AnonPages:         91904 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Mapped:            36320 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Shmem:               860 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Slab:              71748 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">SReclaimable:      41740 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">SUnreclaim:        30008 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">KernelStack:        1884 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">PageTables:         4496 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">NFS_Unstable:          0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Bounce:                0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">WritebackTmp:          0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">CommitLimit:      297448 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Committed_AS:     462648 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">VmallocTotal:   34359738367 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">VmallocUsed:           0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">VmallocChunk:          0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">HardwareCorrupted:     0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">AnonHugePages:         0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">ShmemHugePages:        0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">ShmemPmdMapped:        0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">CmaTotal:              0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">CmaFree:               0 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">HugePages_Total:       0</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">HugePages_Free:        0</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">HugePages_Rsvd:        0</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">HugePages_Surp:        0</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">Hugepagesize:       2048 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">DirectMap4k:      111984 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">DirectMap2M:      516096 kB</code></span></span></span>
+<span style="color: #222222;"><span style="font-family: 'Noto Mono', Menlo, Consolas, 'Courier New', monospace;"><span style="font-size: small;"><code class="western">DirectMap1G:           0 kB</code></span></span></span></pre>
+
+<p><strong>top</strong></p>
+<p>The second is top, which shows what memory is used by the user (including root) by command, and it's always active until you type in CTRL+C. The stats you see when you use top are live, meaning that it's always active.</p>
+<p><strong>vmstat</strong></p>
+<p>vmstat shows you a shows you asimple version of what memory is available on your server. Stats listed are memory, swap, ic system, and cpu<br /><strong>free</strong></p>
+<p>Free Just shows total used, free, shared buff/cahe and available memory of the system.</p>
+  </body>
+</html>
