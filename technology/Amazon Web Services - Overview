@@ -1,0 +1,175 @@
+<html>
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Overview of Amazon Web services </title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's overview on Amazon Web Services">
+<meta name="keywords" content="Ndubuisi Okeh, amazon, amazon web services, AWS, overview, introduction, cloud computing,serverless computing,
+cloud,aws products, aws services">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
+<body>
+<p><u>Introduction to AWS</u></p>
+<p>&nbsp;</p>
+<p>AWS Global Infrastructure: 16 regions, 42 Availability Zones. SO and Edge Locations</p>
+<p>&nbsp;</p>
+<p>Regions: Choose a region to optimize latency, minimize costs, or address regulatory requirements</p>
+<p>&nbsp;</p>
+<p>Zones: Insulated from failures in other Availability zones</p>
+<p>&nbsp;</p>
+<p>Edge locations: Cloudfront distributions at edge locations for high performance delivery of content.</p>
+<p>&nbsp;</p>
+<p>Cloud computing: Cloud computing is the on-demand delivery of computer power, database storage, applications and other IT resources through a cloud services platform via the internet with pay-as-you-go pricing.</p>
+<p>&nbsp;</p>
+<p><u>Cloud Computing Model:</u></p>
+<p>&nbsp;</p>
+<p>IaaS: Contains the basic building blocks for Cloud IT. Such as VPC, EC2, and EBS</p>
+<p>&nbsp;</p>
+<p>PaaS: AWS manages the underlying infrastructure (usually hardware and operating system. Such as RDS, EMR, and Elastic Search</p>
+<p>&nbsp;</p>
+<p>Saas: Completed product that is run and manged by the service provider. Mostly refers to end0yser apps. Eg: Web-based email, Office 365, Salesforce.</p>
+<p>&nbsp;</p>
+<p><u>Serverless Computing:</u></p>
+<p>&nbsp;</p>
+<p>Allows you to build and run applications and services without thinking about severs.</p>
+<p>&nbsp;</p>
+<p>Also referred to us as Function as a Service (FaaS) or abstracted Services</p>
+<p>&nbsp;</p>
+<p>Eg: Amazon simple storage service (S3), AWS Lambda, Amazon DynamoDB, Amazon SNS</p>
+<p>&nbsp;</p>
+<p><u>Cloud Computing Deployment Models</u></p>
+<p>&nbsp;</p>
+<p><u>Cloud: </u>Fully deployed in the cloud</p>
+<p>&nbsp;</p>
+<p><u>Hybrid: </u>Part Cloud and on premises, Connecting Infrastructure and Apps</p>
+<p>&nbsp;</p>
+<p><u>On-premises: </u>Fully on premises, creating our own cloud (Private) through visualization</p>
+<p>&nbsp;</p>
+<p>The website for AWS is aws.amazon.com</p>
+<p>&nbsp;</p>
+<p><u>AWS Product/Service Categories</u></p>
+<p>&nbsp;</p>
+<p>Compute | Storage | Database | Networking and Content Delivery | Management Tools | Security, Identity and Compliance | Messaging | Analytics</p>
+<p>&nbsp;</p>
+<p>Also: Application Services | Migration | Developer Tools | Mobile Services | IOT (Internet of Things) | Business Productivity | Desktop and App Streaming | Game Development | Artificial Intelligence</p>
+<p><u>Storage Service (S3) Introduction</u></p>
+<p>&nbsp;</p>
+<p><u>Storage Services</u></p>
+<p>&nbsp;</p>
+<p>S3: Serverless, abstract, we do not know what is going on behind scenes</p>
+<p>&nbsp;</p>
+<p>Glacier: Long-term archiving of Database</p>
+<p>&nbsp;</p>
+<p>EBS: Elastic Block Storage (Like a hard drive) Attach AWS Block disk to an EC2 Server (volume)</p>
+<p>&nbsp;</p>
+<p>Storage Gateway: High speed link between AWS and On-premises storage (backup)</p>
+<p>&nbsp;</p>
+<p>EFS: Elastic File Storage (Very similar to NAS)</p>
+<p>&nbsp;</p>
+<p>AWS I/E Snowball: Portable Harddrive</p>
+<p>&nbsp;</p>
+<p>Transforming petrabytes of data through AWS storage gateway can be slow and costly. That's where I/E snowball comes in. Amazon will send a snowball device for that. AWS Gateway provides high speed link for data synchronization.</p>
+<p>&nbsp;</p>
+<p><u>AWS Database Services (intro)</u></p>
+<p>&nbsp;</p>
+<p><u>Database:</u></p>
+<p>&nbsp;</p>
+<p>RDS (Relational Database Service): AWS SQL Database Engine (PaaS) Look after patching. User responsible for high load administration of databases such as MySQL,Auroa, Post GRI, Microsoft, Oracle</p>
+<p>&nbsp;</p>
+<p>DynanoDB: Sever less Environment. Just create a table. Very good solution for high speed and NOSQL</p>
+<p>&nbsp;</p>
+<p>ElastiCache: Memory caching for database. Allows very high speed and low latency access to data. It would cache in memory frequency access data from your database.</p>
+<p>&nbsp;</p>
+<p>Redshift: Data warehousing. POSTGRE Database Engine Modified</p>
+<p>&nbsp;</p>
+<p>AWS Database Migration Service: Orchestrates the migration of data from one database to another.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>For Migration: First launch an instance (RDS). Then create a job/workflow listing (Database Migration) that will orchestrate migration.</p>
+<p>&nbsp;</p>
+<p>Manage spikes in demand of data with Elastic Cache. Get frequently access data and stored in cache.</p>
+<p><u>Introduction to AWS Computer Services</u></p>
+<p>&nbsp;</p>
+<p>EC2: Elastic Compute Cloud (Iaas). Server running an operating system, website or applications.</p>
+<p>&nbsp;</p>
+<p>ECS &ndash; Elastic Container Services: Launching services with Docker Elastic Container. Docker has everything needed for server (OS, Apps,</p>
+<p>&nbsp;</p>
+<p>ELB: Distribute request that are coming in Elastic for multiple service and servers, and distribute those load request across multiple servers and manage balancing the load of all servers.</p>
+<p>&nbsp;</p>
+<p>Auto Scaling: To create auto scaling group which we can launch instances into and of would automatically reduce number of service of our demand and those servers reduces or add more server of demand increasing</p>
+<p>&nbsp;</p>
+<p>Lambda: Seamless environment running code on AWS. Run code as a service and get billed.</p>
+<p>&nbsp;</p>
+<p>Elastic Beanstalk: Supply code and provision and architecture for that. Including other services listed above.</p>
+<p>&nbsp;</p>
+<p>Deployment Service: Supplies code it does the rest so we don't have to manually do it.</p>
+<p>&nbsp;</p>
+<p>Horizontal Scaling: Adding more instances as needed. It requires an endpoint, that's where ELB comes into play; Distributing requests to ECS instance in best position to handle requests.</p>
+<p>&nbsp;</p>
+<p>On a sudden big spike, you introduce AutoScaling group to increase and decrease during low demand.</p>
+<p>&nbsp;</p>
+<p><u>Networking and Content Delivery (intro)</u></p>
+<p>&nbsp;</p>
+<p>VPC: creating our own private space in AWS. This is default and addiction VPCs can be created.</p>
+<p>&nbsp;</p>
+<p>Direct Connect: It provides high speed access for the AWS Cloud</p>
+<p>&nbsp;</p>
+<p>Cloud Front: Content delivery network for AWS. Allows to cache regular accessed content into a cloudfront distribution high speed low latency access to data.</p>
+<p>&nbsp;</p>
+<p>ELB: Please refer to computer services.</p>
+<p>&nbsp;</p>
+<p>Route 53: DNS service. Allow to route request for our domain name through to AWS services.</p>
+<p><u>Messaging Services (intro)</u></p>
+<p>&nbsp;</p>
+<p><u>Simple Queue Service (SQS):</u></p>
+<p>Serverless services</p>
+<p>-Application demand decoupling</p>
+<p>&nbsp;</p>
+<p>Simple Notification Service (SNS)</p>
+<p>-publish/subscribe messaging.</p>
+<p>-mobile push notifications</p>
+<p>&nbsp;</p>
+<p>Simple Email Services (SES)</p>
+<p>-for providing bulk delivery of email</p>
+<p>&nbsp;</p>
+<p>Example of a process Decoupling</p>
+<p>&nbsp;</p>
+<p>* If average demand exceeds processing capacity, queue will grow indefinitely</p>
+<p>&nbsp;</p>
+<p>* SQS can provide Cloudwatch metrics that can be used with auto scaling.</p>
+<p><u>Managementy, Security, and Analytics (intro)</u></p>
+<p>&nbsp;</p>
+<p><u>Management Tools</u></p>
+<p>&nbsp;</p>
+<p>CloudFormation: You can write a JSON doc to define exactly what your architecture should be in a file. Then the CF service will grab the template to create a stake to deploy all the services automatically. Git can be sued to manage that document. ** suitable for very complex architecture.</p>
+<p>&nbsp;</p>
+<p>Cloudwatch: Monitoring of services and alarms that could alert to problems with the server. Trigger an event for Auto scaling groups. Set up law sitpoints.</p>
+<p>&nbsp;</p>
+<p>OpsWorks: Deployment Tool that uses Chef recipes for deployment.</p>
+<p>&nbsp;</p>
+<p>ClouldTrail: Security and Auditing Continuously monitors all the API calls in our infrastructure.</p>
+<p>&nbsp;</p>
+<p>Trusted Advisor: Export system. Runs scan of infrastructure and advice you on anything to change; performance, cost and security.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><u>Security, Identitiy and Compliance (intro)</u></p>
+<p>&nbsp;</p>
+<p>Identity and Access Management (IAM): Manage Access to AWS. Root login provides unlimited Access to AWS. Create different users to access AWS and fine grain the permissions. We can group the users</p>
+<p>&nbsp;</p>
+<p>Directory Service: Authorization of third parties that want to access part of AWS account. USE AWS Cognito to authenticate users. It can be used as a Service for Microsoft Active Directory.</p>
+<p>&nbsp;</p>
+<p>Certificate Manager: Enable creation of SSL certificate, so we can have https encryption through and from our website.</p>
+<p>&nbsp;</p>
+<p>Encryption Key Management Service (KMS): Secure source for managing our encryption keys</p>
+<p>&nbsp;</p>
+<p>Web Application Firewall (WAF): Firewall layer we can put in front of our Infrastructure. Adding another layer of defense for our application.</p>
+<p>Analytics (Intro)</p>
+<p>Elastic Map Reduce (EMR): Hadoop as a Service (HaaS). Hadoop is an Analytic service.</p>
+<p>Elastic Search: Search engine capabilities for application.</p>
+<p>Kinesis: Real time data streams collection and analysis</p>
+<p>Quicksight: Can integrate with Amazon Kinesis to provide Data visualization. It can be used with steady data link (s3) and visualize the data</p>
+<p>Data Pipeline: Process and move data between different applications</p>
+</body>
+<html>
