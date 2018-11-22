@@ -71,6 +71,67 @@ Terminal and mouse movements:
 <p>By highlighting the text and click the right mouse button the text can get pasted. There is no cut function to my knowledge.</p>
  
  <p>------------------------</p>
+  
+  
+  <p>The Terminal itself:</p>
+  
+  <p>The terminal is a major part of Linux because most of your work as a sysadmin will typing commands and scripting commands as part of your duties.</p> 
+    <p>It's often said that the terminal is the beating heart of the  Linux OS. This section is to give you a basic understanding of how terminal commands work.</p>
+
+<p>Linux by default uses BASH or Bourne-Again Shell, which is the shell program sh for UNIX.</p>
+
+    <p>UpArrow or DownArrow - Scroll through typed commands</p>
+    <p>Shift+PageUp or Shift+PageDown - Scroll up or down through shell output</p>
+    <p>Home or End - Move to the start or end of a line, respectively</p>
+    <p>Tab - Autocomplete a file name, directory name or command name.</p>
+    <p>Ctrl+c - End a running process</p>
+    <p>Ctrl+d - End-Of-File (EOF) character (usually ends a process or signifies the end of input data)</p>
+    <p>Ctrl+z - Send the currently running process to the background</p>
+    <p>Ctrl+l - Clear the screen, same as running the clear command</p>
+
+<p>Common commands</p>
+
+<p>pwd - Print Working Directory. Outputs the full path of the current directory.</p>
+<p>cd - Change Directory. Used to switch to a different directory.</p>
+<p>ls - List. Lists files and directories in the current directory.</p>
+
+    <p>ls -a Lists "hidden" files and directories also. Hidden files in linux are preceded with a full stop.</p>
+    <p>ls -l Lists further information about the files, including size, modify date, owner and permissions.</p>
+    <p>ls -t List by modify date, with the most recently modified files at the top.</p>
+
+<p>cp - Copy a file/directory.</p>
+
+    <p>cp -r Descend into directories (recursively copy all directory contents).</p>
+
+<p>mv - Move or rename a file.</p>
+<p>rm - Delete a file.</p>
+
+    <p>rm -r Delete directory contents. (Never “rm -r /”! EVER)</p>
+
+<p>chmod - Changes file permissions for the Owner, Group and Others.</p>
+<p>chown - Changes the owner of a file.</p>
+<p>chgrp - Changes the group of a file.</p>
+<p>date - Display current date and time.</p>
+<p>who - Displays a list of currently logged in users.
+  <p>echo - Prints to stdout.</p>
+<p>cat - Concatenates text to stdout.</p>
+<p>grep - Searches for strings in a file or stdin.</p>
+<p>su - Switch user. Defaults to root.</p>
+<p>sudo - Similar to su but uses your own password instead. Lets you configure access in /etc/sudoers.</p>
+<p>passwd - Change password. Defaults to current account.</p>
+<p>rsync - Synchronizes files and directories.</p>
+<p>halt - halt the system </p>
+<p>!! - display last command</p>
+<p>!3 - display third command</p>
+
+<p>To truly understand the terminal is not memorize call the commands and options but rather in seeing the patterns and grasping the underlying concepts.</p>
+
+<p>There two major commands to do administrative tasks: su and sudo.</p>
+
+<p>su will ask for your password and give your root privileges for subsequent commands. sudo on the other hand will give you root privileges for a single command and prompt you to enter your password.  Use your root privileges when needed. Using root privileges irresponsibly can harm your server.</p>
+
+  <p>------------------------------------------</p>
+  
 <p> LAMP Stack</p>
 
 <p>LAMP is the foundation of Linux based servers. LAMP servers work great with Drupal and Wordpress. LAMP stands for the following</p>
