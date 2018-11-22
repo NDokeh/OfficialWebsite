@@ -74,3 +74,12 @@
 <p>The implementation and maintenance of a user and group structure is a design problem whose scope can only be appreciated by someone who has experience in inheriting servers which has a tangled mess of users and groups and does not adequately control security of system resources and files. It cannot be stressed strongly enough that the design of a useful and flexible group structure requires careful forethought and more than a little luck, and when ad hoc changes are made for the sake of convenience or time-saving or cost-cutting measures, security can and will be compromised quickly and effectively internally and externally.</p>
 <p>&nbsp;</p>
 <p>Most systems administrators will keep all of the commands needed to set up their user and group structure in one or more scripts, to facilitate rebuilding the server, and to make it easier to keep track of what is already in place when making changes.</p>
+
+<p>Important:</p>
+
+<p>It is recommended that passwords should be set with the following parameters for every user in the server:</p>
+
+1. One capital lettter
+2. One number
+3. One special character
+4. At least eight characters
