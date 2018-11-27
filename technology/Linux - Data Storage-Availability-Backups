@@ -1,5 +1,13 @@
 <html>
-
+<head>
+<title> The Official Website of Ndubuisi Okeh - Technology - Data Storage,Availability, and Backups </title>
+<meta charset="UTF-8">
+<meta name="description" content="Ndubuisi Okeh's overview on Linux Data Storage and Backups ">
+<meta name="keywords" content="Ndubuisi Okeh, backups, data storage,Availability, disk failure">
+</head>
+<style>
+body {background-image: url("20180721_104301.jpg");}
+</style>
 <body>
 <p>As a Linux Systems Admin you're responsible for not only for the server but also the data on the server. You must have a backup strategy. If you are taking responsibility for a system that someone else set up you should review the back up decision to make sure hat you understand them and that they are still appropriate.</p>
 
