@@ -1,0 +1,74 @@
+<html>
+
+<body>
+<p>As a Linux Systems Admin you're responsible for not only for the server but also the data on the server. You must have a backup strategy. If you are taking responsibility for a system that someone else set up you should review the back up decision to make sure hat you understand them and that they are still appropriate.</p>
+
+<p><u>What is Data?</u></p>
+
+<p>Data is created by Individuals for personal use and production, and Businesses for the use and production of products and services. Data is a collection of raw facts from which conclusions may be drawn. Data is converted into more convenient forms like Digital Data. This is because of increase in data processing capabilities. Lower cost of digital storage. Affordable and faster communications technology.</p>
+
+<p>Data can be categorized as either structured or unstructured data. Strucuted data is rows and columns. Unstructured data is others like instant messages, documents, web pages, rich media, invoices, audi and video, contracts, forms, images, manuals, checks, xrays, and email attachments. Over 80% of enterprise information is unstructured, while 20% is structured.</p>
+
+<p>Individuals and businesses turn the data they collect into information. The Information is the intelligence and knowledge derived from data.</p>
+
+<p>This data created by individuals/business must be then stored for further processing and use. The type of storage used is based on the type of data and the rate at which it is created and used.</p>
+
+<p>Individuals can use hard disks (which can be internal or external), CDs, DVDs, SD cards, and thumb sticks. Businesses can: Hard disks, external disk arrays, and tape libraries.</p>
+
+<p>There are three storage models for storing and using data. They can use centralized ones such as mainframe computers and storage networking. There are decentralized ones such as Client-sever models</p>
+
+<p>The need for storage and growth of data comes from a US Federal law titled the Sarbanes-Oxley Act of 2002. One of the sections requires all business records, including electronic record and electronic messages must be saved for at least five years. IT departments in the Us are increasingly faced with the challenge of creating and maintaining a corporate records archive in a cost-effective fashion that satisfies the requirements put forth by the legislation</p>
+
+<p><u>Types of backups</u></p>
+
+<p>There are three types of backups for systems administration.</p>
+
+<ul>
+  <li>Full: A Full backup copied from a hard drive to another hard drive or tape.</li>
+  <li>Differential incremental &ndash; A backup that has files that has changes since the last backup. This means you backup new files that have created or versions of that has changed since the last backup. Basically backs up all the files that have changed since the last full backup</li>
+  <li>Cumulative Incremental &ndash; A backup that has file changes since the last full backup. This means you will have files from the old backup along with new files from the hard drive. Basically only changes since last backup.</li>
+<li>Archive backup &ndash; This is where you complete transfer everything from the old hard drive to the new hard drive. Basically removing everything except the metadata.</li>
+</ul>
+
+<p>Data protection can be also based on the basis of being intact, usable, reliable, available. Or Integrity, Usability, Reliability, and Availability. Based on the CIA model, it can be rearranged as Availability, Integrity, Reliability, and Usability.</p>
+
+<p><u>Testing backups.</u></p>
+
+<p>It's essential that your backups are tested by restoring and reviewing them at least once a year. The test should be able to perform the following:</p>
+
+<ul>
+<li>Restoring many single files. </li>
+>li<Restoring an older version of a file. </li>
+<li>Restoring an entire folder. </li>
+<li>Restoring an entire drive and comparing the checksum.</li>
+</ul>
+
+<p>Your backup strategy should take in account the following:</p>
+
+<ul>
+<li>Bitrot and file corruption</li> 
+<li>Burglary and theft Fires Hard Drive failure. </li>
+<li>Human error via accidental deletion or modification, or misplacement of data storage</li> 
+<li>Intentional sabotage by someone you may know personally </li>
+<li>Malware, viruses, ransomware </li>
+<li>Natural disasters such as floods, tornado, storms </li>
+<li>And power irregularities like dips and brownouts, lighting strikes, and surges and spikes.</li>
+</ul>
+
+<p>Why have a backups in the first place? They allow you to recover if your machine or server is compromised by malware or if there is a disk failure. Disks can fail without warning. </p>
+
+<p>There are two example strategies and approaches to backups.</p>
+
+<p>1. Store important files on local disks and back up the rest in external hard drives. 2. Store non volatile data away from the machine on the DVD or other media and have a working copy on the machine's disks</p>
+
+<p>There are more ways to do proper backups. It's best to have at least 3 independent copies of the data. One of or more of those copies must be offline and at a different physical location.</p>
+
+<p><u>Cloud Storage</u></p>
+
+<p>Now a word about cloud storage: It's a bad idea if you do not have network access, slow connection, lose your password, get phished or hacked, or get banned. Any of that happen and your data is gone.</p>
+
+<p>Other considers include that unencrypted backups can be red by the cloud provider. Cloud providers could go offline or shutdown without warning and cloud provider may be in a different legal jurisdiction to you.</p>
+
+<p>In short: <b>DO NOT TRUST THE CLOUD</b></p>
+</body>
+</html>
