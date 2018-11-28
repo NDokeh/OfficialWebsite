@@ -68,7 +68,22 @@ body {background-image: url("20180721_104301.jpg");}
 
 <p><strong>top</strong></p>
 <p>The second is top, which shows what memory is used by the user (including root) by command, and it's always active until you type in CTRL+C. The stats you see when you use top are live, meaning that it's always active.</p>
-<p><strong>vmstat</strong></p>
+
+<p>Top provides a real time summary of the top users of your server's resources.</p> 
+
+<p>Load average: three numbers that roughly relefect demand for your CPUs on the system (1,5,15 minutes) if it's higher than the # of the Cpus you have, that's often bad.</p>
+
+<p>Memory: 4 numbers: total/fre/used/cached. One perhaps unexpeted thing: Total is not free+used but free+used+ +  filesystem cache</p>
+
+<p>%CPU: this colum is given as % of a single core. If you have 4 cores, this can go up to 400%.</p>
+
+<p>RES: or resident set size aka how much memory your process is using</p>
+
+<p>SHR is how much of the RES is shared with other processes.</p>
+
+<p>Htop is merely a prettier version of top where it actually shows you graphs.</p>
+  
+  <p><strong>vmstat</strong></p>
 <p>vmstat shows you a shows you asimple version of what memory is available on your server. Stats listed are memory, swap, ic system, and cpu<br /><strong>free</strong></p>
 <p>Free Just shows total used, free, shared buff/cahe and available memory of the system.</p>
   </body>
