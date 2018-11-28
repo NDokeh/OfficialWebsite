@@ -1,0 +1,31 @@
+There are seven run levels in Linux OS systems, numbered 0 through 6. Five of which have fairly well-defined uses
+
+Here are those run levels described.
+
+The run levels of linux:
+
+0 – Power down: Shut down operating system so that the server will be safe to turn off the power to the machine
+
+S/s – Single User – Run the system in a single – user mode with some file system mounted and accessible
+
+1 – Single user admin: Run the system in a single-iuser administrativ emode with alla vailable file systems accessible but user logins disabled. This is typically used for repairing servers or for backing up and restoring data. It does not include networkign.
+
+2 – Mutli-user: Run the system in a multi-user mode. Multuiple users can log in, all file sytems are accessible but the NFS daemon is not running.
+
+3 – Mmulti user w/NFS: Run the system in the standard mode: norma operations allowed, NFS used to share resources. Default run level for all linux operating systems and also used to run X for a graphical login interface. 
+
+4 – Alt. Multi user, unused by defalt, but you can define it according to your needs
+
+5 – Power down – Same as run level 0, in addition it ill automnatucally turn off the power if the hardware supports that.
+
+6 – Reboot – Shutdown the system to run level 0 and then reboot it to the default run level specififed in the initab file
+
+The major  run levels you will use as a sysadmin are:
+
+1. runlevel 0, for shutting down the system.
+
+2. runlevel 1, for single user mode (typically used for repair or backup)
+
+3. runlevel 3, the default mode for linux servers and 
+
+4. runlevel 6, for rebooting
