@@ -80,5 +80,45 @@ body {background-image: url("20180721_104301.jpg");}
 <p>Other considers include that unencrypted backups can be red by the cloud provider. Cloud providers could go offline or shutdown without warning and cloud provider may be in a different legal jurisdiction to you.</p>
 
 <p>In short: <b>DO NOT TRUST THE CLOUD</b></p>
-</body>
+
+  <p><u>How and When to do backups?</u></p>
+
+Creating backups
+<br>
+To make a regualr copy use the following syntax
+<br>
+mv [target file] [location\loc\targetfile.ext.old]
+<br>
+To make a tar version use: tar – cvzf [file.tar] [list of files to tar] or tar -xvwf [file.tar]
+<br>
+To make a compressed .tar (tar.gz) use: tar -czvf [file.tar.gz] target files
+<br>
+decompressed tar -xzvwf [far.tar.gz]
+<br>
+More information about taring
+<br>
+tar [options] [name.tar] [files and folders]
+<br>
+options:
+<br>
+t - test
+<br>
+v - verbose
+<br>
+f - 
+<br>
+x - extract
+<br>
+c - compress
+<br>
+(or use gzip to zip or unzip a file if available)
+<br>
+<strong>So, when to do backups?</strong>
+<br>
+/export/home : Daily
+<br>
+Other folders: Weekly
+<br>
+/usr/: Weekly
+  </body>
 </html>
