@@ -1,0 +1,24 @@
+File System Check System
+
+Utility for checking and repairing the files system inconsistence due to abnormal shutdown.
+
+It has 5 phases
+Phase 1 : Check block and size
+Phase 2 : Check pathname
+Phase 3 : Check connectivity
+Phase 4 : Check reference count
+Phase 5 : Check cylinder group
+
+Reason to check for inconsistences:
+1.	Software error on Kernel
+2.	Turning off system improperly, or through a power failure.
+3.	Defective hardware like problems with the harddisk.
+
+State Flags
+FSACTIVE
+FSBAD
+FSCLEAN
+FSLOG
+FSSTABLE
+
+
