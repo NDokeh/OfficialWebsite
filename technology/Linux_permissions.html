@@ -1,0 +1,34 @@
+Unix permissions are divided into three sections. User, Group, and Others or UGO
+
+Under each group there are three permissions read, write, and execute or rwx.
+
+You can find and show permissions of each file using ls -l or for a particular file: ls -l [filename.ext]
+
+File permissions are 12 bits. Since they’re each set up as binary code. For example 110 in binary is 6 while 100 is 4. So you can easily dial a file permission setting like so via chmod. 
+
+Examples: 
+777 – rwx for all. 
+755 - rwx for owner, and rx for group and other. 
+744 – rwx,r,r: All permissions for owner, with read only for the rest
+And 444 r,r,r Or read only
+
+Note that the default permissions for files and directories are 644 and 755 respectively.
+
+And there are two versions of how read, write, and execute affect files and directories.
+
+There are other commands to change file and folder permissions.
+
+chmod to change permissions
+chgroup to change group permissions
+chown change ownership and group ownership of a file.
+
+There are three special versions of permissions
+
+setuid: Users who access the file is granted access permission of the onwer of the file
+You can tell that setuid is active by looking for the s in rws. This means that the program always  runs as root, no matter who started using the command.
+Setgid: Similar to setud, but the process is changed to owner of the file. Setgid does three different unrelated things for executable, directories, and regular files.
+Stickybit: A special permission that protect the files within a public writable directory
+                  Stickybit permission set the shared directory, user can create a files or directory
+                  But only by owner of the directory can modify or delete.
+
+It's worth noting that setuid and setgid are potential security risk, but stickybit is a security boost.
