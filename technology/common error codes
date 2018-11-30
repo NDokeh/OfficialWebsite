@@ -1,20 +1,26 @@
 Common error codes
 
 200 OK * Not a error code, but you rarely see this. This means that the page can be accessed.
+The Standard response for a successful http request.
 
 201 Created *
 
 204 No Content *
 
 400 Bad Request
+Request had bad syntax or was impossible to fulfill
 
 401 Unauthorized
+User failed to provide a valid user name/password required for access to a file/directory
 
 403 Forbidden
 
 404 Not Found – The most common error on the internet.
 
+408:Request Time-Out
+
 409 Conflict
+(part of the top ten but less known)
 
 410 Gone
 
@@ -22,6 +28,8 @@ Common error codes
 
 502 Bad Gateway
 
-503 Service Unavailable
+503 Service Unavailable or Out of Resources: 
+Server cannot process the request due to a system overload; should be a temporary condition
 
 504 Gateway Timeout
+Service did not respond within the time frame that the gateway was willing to wait
