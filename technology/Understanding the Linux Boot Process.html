@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>The Linux Boot Process has six stages. Bios, MBR, GRUB, KERNEL, Init, and Runlevel. Bios, and MBR are familiar if you used Windows operating systems but GRUB, Kernel, Init, Runlevel are unique to Linux operating systems.</p>
+
+<p>In this article I will explain each step in the process in full. </p>
+
+<p>BiOS stands for Basic Input Output System. BiOS is a software program come spre-built in a mother board chipset. BiOS loads and scans for hardware devices attached to the mother board such as RAM, Hard Disk Drives, and the like. It also performs some system integrity checks.</p>
+
+<p>The BiOS executives the next stage of the boot process by searching for the MBR of the primary hard drive. It scans for the 1st stage loader and hands over the responsibility to MBR.</p>
+
+<p>The MBR is located in the 1st sector of the bootable disk typically dev hda or dev sda.</p>
+
+<p>It contains three compents primary boot loader, partition table infromation and MBR validation check</p>
+
+<p>The MBR holds the small binary information of the 1st stage of the loader. It contains the information of loader of most operating systems. And it's small : 512 bytes of space. And it consists of the physical sector of the first disk drive. MBR contains a mini executable programs and a table specify the primary partitions, an also documents which primary partition is ACTIVE. The BIOS executives the GRUB or Grand Unified Bootloader.</p>
+
+<p>GRUB scans the partition table and finds the second stage boot loader on the partition considered as bootable.</p>
+
+<p>The boot loader termed from 1st stage loader to the second stage loader. GRUB is the default stage 2 boot loader.</p>
+
+<p>Once GRUB is loaded into the RAM it searches for the location of the kernel. And will load it from /boot partition.</p>
+
+<p>One the kernel is found and loaded, it will initialize CPU components, initialize the schedule, mount the root file system in RW mode and fork off the init process. It does two thing in a short amount of time: start the core system of shared resource managers of RAM, processor and hard drives. And starts a single process called /sbin/init/ The init process is the very first process which loads the various daemons and mounts all the partitions which are listed under /etc/fstab. It basically executives run-level programs</p>
+
+<p>/sbin/init reads the /etc/initab file. And it sets the default runlevel. (telinit command allows admins to tell the init process to change its current run level . And runs the rest of the processes including the x display manager xdm and the tty process. And starts the users login screen. </p>
+
+<p>Finally the run level programs are executed from /etc/rc.d folder</p>
+</body>
+</html>
