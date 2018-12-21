@@ -37,5 +37,18 @@ body {background-image: url("20180721_104301.jpg");}
 
 <p>5. Now once you're able to enter the server, you will be able to control the system via linux CLI. </p>
 
+  <p><b>Implementing passwordless authentication</b></p>
+
+<p>Now once you set up ssh, you can do something that is a step further to enhance security: Which is to enter the system without entering a password. This can be done by logging into the system, and once you get to your directory and creating a file under .ssh/ called &ldquo;authorized_keys&rdquo;</p>
+
+<p>Then create a public key and private key via PuTTY gen. Follow the instructions to save the public and private key, and input the passcode for the private key. </p>
+
+<p>Then you can upload the entire public key by opening the file, and copying the entire thing. Going to your terminal, and using cat [whole public key] >> .ssh/authorized_keys</p>
+
+<p>Then set permissions on as follows chmod 700 on the .ssh folder and and chmod 640 .ssh/authorized_keys file.</p>
+
+<p>Be advised that you may have to input the passcode each time you do this. But once completed you will not have to input your passcode once you connect with a private key.</p>
+  
+  
 </body>
 </html>
