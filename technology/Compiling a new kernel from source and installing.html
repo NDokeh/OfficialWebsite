@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>First you check the current kernel version using uname -r. Then you download the latest kernel from source (like from kernel.org). Then change to the directory where the file was downloaded and extract using tar xf, then you change to that directory.</p>
+
+<p>The next step is to configure which modlues are to be included and which ones are to be left out. This can be done by copying the existing kernel config file and use menuconfig to make any necessary changes. If you are not sure about making changes, just save and exit.</p>
+
+<p>To compile the kernel and it's modules, use the make command. This is followed by make modules_install to install the kernel modules.</p>
+
+<p>Finally we use make install to copy the kernal and the .config file to the /boot folder and to generate the system.map file.</p>
+<p>The three actual steps via the command line are as follows.</p>
+
+<p>Sudo make</p>
+
+<p>sudo make modules_install</p>
+
+<p>sudo make install.</p>
+
+<p>The final step is to make sure the new kernal is to be used the next the server boots up.</p>
+
+<p>This is done via update-initramfs -c -k</p>
+
+<p>Then use update-grub, which automatically looks for the kernels present in the /boot folder and adds them to the GRUB's config file.</p>
+<body>
+<html>
