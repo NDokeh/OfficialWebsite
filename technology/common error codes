@@ -1,35 +1,29 @@
-Common error codes
+<p>Common error codes</p>
 
-200 OK * Not a error code, but you rarely see this. This means that the page can be accessed.
-The Standard response for a successful http request.
+<p>200 OK * Not a error code, but you rarely see this. This means that the page can be accessed. The Standard response for a successful http request.</p>
 
-201 Created *
+<p>201 Created *</p>
 
-204 No Content *
+<p>204 No Content *</p>
 
-400 Bad Request
-Request had bad syntax or was impossible to fulfill
+<p>400 Bad Request Request had bad syntax or was impossible to fulfill</p>
 
-401 Unauthorized
-User failed to provide a valid user name/password required for access to a file/directory
+<p>401 Unauthorized User failed to provide a valid user name/password required for access to a file/directory</p>
 
-403 Forbidden
+<p>403 Forbidden</p>
 
-404 Not Found – The most common error on the internet.
+<p>404 Not Found &ndash; The most common error on the internet.</p>
 
-408:Request Time-Out
+<p>408:Request Time-Out</p>
 
-409 Conflict
-(part of the top ten but less known)
+<p>409 Conflict (part of the top ten but less known)</p>
 
-410 Gone
+<p>410 Gone</p>
 
-500 Internal Server Error
+<p>500 Internal Server Error</p>
 
-502 Bad Gateway
+<p>502 Bad Gateway</p>
 
-503 Service Unavailable or Out of Resources: 
-Server cannot process the request due to a system overload; should be a temporary condition
+<p>503 Service Unavailable or Out of Resources:  Server cannot process the request due to a system overload; should be a temporary condition</p>
 
-504 Gateway Timeout
-Service did not respond within the time frame that the gateway was willing to wait
+<p>504 Gateway Timeout Service did not respond within the time frame that the gateway was willing to wait </p>
