@@ -11,36 +11,103 @@ body {background-image: url("20180721_104301.jpg");}
 </style>
 
 
-<p>TCP/IP is defined as Transmission Control Protocol/Internet Protocol. A suite of communications protocol used to connect hosts on the internet. TCP/IP is built in Stacks.  Network Hardware, data packets, protocols for data exchange. TCP/IP is a most common stack.</p>
+<p>Definitions:</p>
 
-<p>The OSI model or Open Systems Interconnections model is how the layers of TCP/IP stack is organized. The OSI model is the following</p>
+<p>VPN &ndash; Virtural Private Network </p>
 
-<p>1: Physical - Items that you can touch and fell such as NICs (Network Interface Card) and GBICs (Gigabyte Interface Card) </p>
-<p>2: Datalink - Responsible for verifying that you have connectivity</p> 
-<p>3: Network - Tells you where signals or packets are headed</p> 
-<p>4: Transport - </p>
-<p>5: Session - Makes sure there is a connection what was being sent and what is being received</p>
-<p>6: Presentation - Prepares the packet or signal for the use of the application </p>
-<p>7: Application </p>
-<p>8: Soft Skills</p>
+<p>LAN &ndash; Local Area Network</p>
 
-<p>The networking layer of OSI is affeced when a ISP is found to be blocking UDP traffic from a souce host.</p>
+<p>Network nodes</p>
 
-<p>1-4 are Data Transport Layers, while 5-7 are Application Layers. </p>
+<p>TCP is defined as Transmission Control Protocol. TCP supports the concept of a connection called three way handshake.</p>
 
-<p>The TCP/IP devides these into the following: 1-2 Data Link/wirelink, 3 Internet/Ethernet, 4 Transport, 5-7 as Application/TCP/UDP layer. As TCP/IP is built in stacks.</p>
+<p>NIC &ndash; Network Interface Card</p>
 
-<p>TCP/IP also has the following:</p>
+<p>IP is defined as Internet Protocol &ndash; It's part of TCP/IP: A suite of communications protocol used to connect hosts on the internet.</p>
 
-<p>ICMP: Internet Control Message Protocol - used for error messages seen on the internet such as "404 Not Found" or "403 Forbidden".The 
-  messages are categorized as the following:The HTTP codes are as follows: 1xx informational, 2xx Success, 
-  3xx Redirection, 4xx Client Error, 5xx Server Error</p> 
-  
-<p>UDP: User Datagram Protocol - used for DNS + NFS and streaming media.</p> 
+<p>GBIC &ndash; Gigabyte Interface Card</p>
 
-<p>TCP: Tranmission Control Protocol - SMTP, FTP, and HTTP are built on top of TCP</p>
+<p>SSL &ndash; Secure Socket Layer</p>
 
-<p>------------------------------</p>
+<p>IMAP &ndash; Internet Message Access Protocol</p>
+
+<p>POP3 &ndash; Post Office Protocol 3</p>
+
+<p>DNS - Domain Name System &ndash; A phone book of the internet. Translated domain names to setting up host name and IP addresses.</p>
+
+<p>TLS &ndash; Transport Layer Security</p>
+
+<p>BGP &ndash; Border Gateway Protocol. It's states: Idle, Connect, Active, Operational, Open confirm, Established.</p>
+
+<p>ICMP &ndash; Internet Control Message Protocol &ndash; Used for error messages.</p>
+
+<p>UDP &ndash; User Datagram Protocol &ndash; Used for DNS+ NFS and streaming media.</p>
+
+<p>TCP &ndash; Tranmission Control &ndash; SMTP, FTP, and HTTP: It's built on top of TCP</p>
+
+<p>Network addressing: Network hardware address (Media Access Control), Numeric IP address, and text based hostnames.</p>
+
+<p>DHCP stands for Dynamic Host Configuration Protocol. DHCP works by assigning different IP addresses to a device or a network.</p>
+
+<p>SMTP</p>
+
+<p>SSH &ndash; Secure Shell</p>
+
+<p>ping hostname</p>
+
+<p>Iptables &ndash; a administration toool for IPv4 packet filtering and NAT. Used to set up, maintain, and inspect tables of IPv4 packet filter rules.</p>
+
+<p>----------</p>
+
+<p>Networking addresses consists of the following: Network hardware address, numeric IP addresses, Media access control, and text based hostnames.</p>
+
+<p>How IP addresses work</p>
+
+<p>IP addresses work as the following:</p>
+
+<p>It goes from your computer, to your home router, to intermediate routers to international cables to the target server.</p>
+
+<p>When a packet drives at a router the router has to decide which step will the packet will go.</p>
+
+<p>Routers use a protocol called BGP to decide where any given packet should go next.</p>
+
+<p>A packet can take a lot of different routes to get to the same destination. You can use traceroute to see what path your packet took.</p>
+
+<p>How does DNS work</p>
+
+<p>DNS is the phone book of the internet, it translates names to ip addesses. The IP address are also called A records.</p>
+
+<p>Sometimes they tell you that a name of a site or a website is an alias or a CNAME record.</p>
+
+<p>Most DNS queries get cached by other DNS servers.</p>
+
+<p>And when an important DNS server dies like a authoritative DNS server, it won't let you got to te site</p>
+
+<p>Ports</p>
+
+<p>A port are part of the TCP and UDP protocols. Thugs tcp 999 and udp 999 are different.</p>
+
+<p>When you send a TCP message, you want to talk to a specific kind of program. We want to have different kinds of programs on the same server. Soe very TCP packet has a port number between 0 and 65535 on it..</p>
+
+<p>Some common ports are </p>
+
+<p>DNS: port 53 HTTP: TCP port 80 HTTPS: TCP port 443 SMTP (mail): TCP port 25</p>
+
+<p>TCP </p>
+
+<p>What is TCP: It is a network protocol that lets people send data reliably. Everytime you look at a webpage you're using TCP. It is a protocol that lets you acknowledge when you revived the data.</p>
+
+<p>Every packet has a sequenc e number which is basically the number of bytes sent so far. </p>
+
+<p>How it works:</p>
+
+<p>Step One A connection</p>
+
+<p>Two: After the connection is acknowledged it will keep track of what got sent successfully. The sending of messages is part of the ACK process. </p>
+
+<p>Three: If more bytes are needed, the process will continue. If some data dos not get acknowledged, the server can retry and hope it works next time.</p>
+
+<p>Four: The connection will be closed after the data is received.</p>
 
 <p>TCP supports the concept of a connection called three way handshake. The three way handshake of TCP: SYN, SYN-ACK, ACK. The client sends TCP packets over IP and sets TCP flag to SYN. Second packet is sent from server to the client. The packet has two TCP flags. SYN and ACK. Third packet goes from client to server only has the ACK bit set.</p>
 
@@ -48,22 +115,71 @@ body {background-image: url("20180721_104301.jpg");}
 
 <p>TCP Flags for packets: URG, ACK, PSH, RST, SYN, FIN</p>
 
-<p>---------------------------------------------------------------</p>
-<p>Tools for troubleshooting network issues.</p>
+<p>TCP/IP is built in Stacks. Network Hardware, data packets, protocols for data exchange. TCP/IP is a most common stack.</p>
+
+<p>Modern networks operate on chunks of data called packets.</p>
+
+<p>TCP/IP is defined as Transmission Control Protocol/Internet Protocol. A suite of communications protocol used to connect hosts on the internet. TCP/IP is built in Stacks. Network Hardware, data packets, protocols for data exchange. TCP/IP is a most common stack.</p>
+
+<p>The OSI model or Open Systems Interconnections model is how the layers of TCP/IP stack is organized. The OSI model is the following</p>
+
+<p>1: Physical - Items that you can touch and fell such as NICs (Network Interface Card) and GBICs (Gigabyte Interface Card)</p>
+
+<p>2: Datalink - Responsible for verifying that you have connectivity</p>
+
+<p>3: Network - Tells you where signals or packets are headed</p>
+
+<p>4: Transport -</p>
+
+<p>5: Session - Makes sure there is a connection what was being sent and what is being received</p>
+
+<p>6: Presentation - Prepares the packet or signal for the use of the application</p>
+
+<p>7: Application</p>
+
+<p>8: Soft Skills</p>
+
+<p>The networking layer of OSI is affected when a ISP is found to be blocking UDP traffic from a souce host.</p>
+
+<p>1-4 are Data Transport Layers, while 5-7 are Application Layers.</p>
+
+<p>The TCP/IP decides these into the following: 1-2 Data Link/wirelink, 3 Internet/Ethernet, 4 Transport, 5-7 as Application/TCP/UDP layer. As TCP/IP is built in stacks.</p>
+
+<p>TCP/IP also has the following:</p>
+
+<p>ICMP: Internet Control Message Protocol - used for error messages seen on the internet such as &quot;404 Not Found&quot; or &quot;403 Forbidden&quot;.The messages are categorized as the following:</p>
+
+<p>The HTTP codes are as follows: 1xx informational, 2xx Success, 3xx Redirection, 4xx Client Error, 5xx Server Error</p>
+
+<p>UDP: User Datagram Protocol - used for DNS + NFS and streaming media.</p>
+
+<p>TCP: Tranmission Control Protocol - SMTP, FTP, and HTTP are built on top of TCP</p>
+
+<p>Testing Basic Connectivity:</p>
+
+<p>ping sends a simple ICMP packet to the system you name until you stop with a Control+C key combo. The number of tests can be limited with a -c(#) option.</p>
+
+<p>Example: ping -c 5 speaker</p>
+
+<p>Then a taceroute, which sends a series of 3 test packets to each computer between your system and a specified target system. Example</p>
+
+<p>$traceroute -n 10.1.0.45</p>
+
+<p>Tools of a Network Engineer:</p>
 
 <p>dladm - to administer data links</p>
 
-<p>traceroute - for displaying the route and measurng transit delays of packets across a ip network</p>
+<p>traceroute - for displaying the route and measuring transit delays of packets across a ip network</p>
 
 <p>snoop - monitor the state of data transfers. Can be used only by the root user</p>
 
-<p>netstate - print ntwork connections, routing, tables, interface stats</p>
+<p>netstat - print network connections, routing, tables, interface stats</p>
 
-<p>ping or usr/sbin/ping- test the ability of source PC to reach a destination comouter</p>
+<p>ping or usr/sbin/ping- test the ability of source PC to reach a destination computer</p>
 
-<p> dig - domain information grouper: network admin command linetool for querying DNS servers.</p>
+<p>dig - domain information grouper: network admin command linetool for querying DNS servers.</p>
 
-<p>Nslookup - used to obtain domin name or IP address mapping or for any other specfic DNS record.</p>
+<p>Nslookup - used to obtain domain name or IP address mapping or for any other specfic DNS record.</p>
 
 <p>iw config -command for wireless networking interfaces</p>
 
@@ -71,51 +187,146 @@ body {background-image: url("20180721_104301.jpg");}
 
 <p>The network stack consits of the following: Network Hardware, data packets, protocols or data exchange. Modern network soperate on chuncks of fata caled packets.</p>
 
-<p>-----------------------------------</p>
+<p></p>
 
-<p> Networking addresses consists of the followng: Network hardware address, numeric IP addresses, Media access control, and text based hostnames.</p>
+<p> Others include</p>
 
-<p>------------------------------------</p>
-<p>Hosts and networks:</p>
+<p>Netstat &ndash;f inet Ping &ndash;s  Snoop &ndash;v Ifconfig</p>
 
-<p>Classes and Octet Range:</p>
-<p>A 0 - 126 </p>
-<p>B 128 - 192.167</p> 
-<p>C 192.169 - 223</p>
+<p>Related but important </p>
 
-<p>Never put a single 0 in any part of a ip addrss unless accompanied with a 1- i.e. 10 or 100/1.x.or 1xx</p>
+<p>sockets routing drivers</p>
 
-<p>Network types:</p>
-<p>Class A xxx.xxx.xx.xx</p>
-<p>Class B xxx.xx.x.x</p>
-<p>Class C xxx.xxx.x.xxx</p>
+<p>pinging ports via nmap. </p>
 
-<p>The third part of the IP address determines the network location of the IP.</p>
-<p>------------------------</p>
+<p>Pinging is the security auditors best friend.</p>
 
-<p>pinging ports via nmap. Nmap is the security auditors best friend.</p>
+<p>Nmap -p 80 hostnamedot.com</p>
 
-<p>Nmap -p 80 hostnamedotcom</p>
+<p>-p represents the specific port option, 80 represents the port to inspect and hostnamedot.com is the hostname</p>
 
-<p>-p represents the specifc port option, 80 represents the port to inspect and hostnamedotcom is the hostname</p>
-<p>------------------------------</p>
-<p>Linux networking commands: iptables, sockets, routing, drivers</p>
-<p>-----------------------</p>
-<p>How Does DCHP Work?</p>
-
-<p>Dynamic Host Config Protocol. DHCP works by assigning different IP addresses to a device or a network.</p>
-
-<p>-----------------------------------------------------</p>
+<p> IPTables</p>
 
 <p>iptables is a very powerful firewall built into linux. Iptables, ables you with the ability to manage all connection active in and out of each server. Rules are based on chains.</p>
 
-<p>INPUT – Packet destined to locak sockets</p>
-<p>OUTPUT – Packets being routd through the box</p>
-<p>FORWARD – for locally geerated packets</p>
+<p>INPUT &ndash; Packet destined to local sockets</p>
+
+<p>OUTPUT &ndash; Packets being routed through the box</p>
+
+<p>FORWARD &ndash; for locally generated packets</p>
 
 <p>You maintain the ability to do the following with packets using iptables:</p>
-<p>ACCEPT – A firewall rule that speciffice criteria for a packet ad target. This one allows the packet to go through.</p>
-<p>DROP – drop the packet on the floor</p>
+
+<p>ACCEPT &ndash; A firewall rule that specific criteria for a packet ad target. This one allows the packet to go through.</p>
+
+<p>DROP &ndash; drop the packet on the floor</p>
+
 <p>REJECT - reject the packet from the system, return it to sender</p>
 
+<p>iptables lets you create rules to match network packets and accept/drop/modify them.</p>
 
+<p>It's often used for firewalls or to do NAT.</p>
+
+<p>the basic thing about iptables is that tables have chains, chains, have rules</p>
+
+<p>tables</p>
+
+<p>chains</p>
+
+<p>rules</p>
+
+<p>iptables-save: this prints out all iptables rules. You can restore them with iptables -restore. It's also the easiest way to view all rules</p>
+
+<p>-j TARGET: Each iptables rule has a target (what to do with matching packets):</p>
+
+<p>Options are as follows:</p>
+
+<p>ACCEPT/DROP/RETURN</p>
+
+<p>the name of an iptables chain</p>
+
+<p>an extension (man iptables-extensions). Popular ones include DNAT, LOG, MASQUERADE</p>
+
+<p>tables have different chains</p>
+
+<p>filter mangle national</p>
+
+<p>It helps to learn when packets get processed by a given table/ chain leg.</p>
+
+<p>(Eg Filter&larr; OUTPUT = all locally generated backets)</p>
+
+<p>You can match lots of packet attributes</p>
+
+<p>-s: src ip</p>
+
+<p>-d: dst ip</p>
+
+<p>-p: tcp/udp</p>
+
+<p>-i: network interface</p>
+
+<p>-m: lots of things</p>
+
+<p>Note: In Ubuntu, ufw is used as configuration tool for iptables</p>
+
+<p>Ports can be turn on or offed by using sudo ufw enable [port number]</p>
+
+<p>sudo ufw enable or sudo ufw allow 22 or sudo ufw deny 22</p>
+
+<p>you can allow http traffic by sudo ufw allow http ----------------------------------------- tcpdump</p>
+
+<p>tcpdump&#160;is a most powerful and widely used command-line packets sniffer or package analyzer tool which is used to capture or filter&#160;TCP/IP&#160;packets that received or transferred over a network on a specific interface . It basically prints out a description of the contents of pakcets on a network interface that match the boolean expression. It's calso used ot captre network traffic</p>
+
+<p>tcpdump -i eth0 'tcp port 80' &ndash; display HTTP communication</p>
+
+<p>tcpdump -i eth0 'not port ssh' &ndash; all communication except SSH</p>
+
+<p>-----------------------------------</p>
+
+<p>For a security auditor, a nmap is the secuirty auditors best friend. </p>
+
+<p>Example: nmap -p 80 [hostname]</p>
+
+<p>--------------------------------</p>
+
+<p>Changing a IP Address</p>
+
+<p>For Solaris and Redhat</p>
+
+<p>Solaris</p>
+
+<p>Via the terminal 1.ifconfig <interface> <removeif> <ip> 2.ifconfig <interface> <addif> <ip> 3.ifconfig <interface> dchp <ip> 4.ifconfig <interface> subnet <ip> 5.ifconfig <interface> domain name <ip></p>
+
+<p>Red Hat</p>
+
+<p>Via the GUI: You go to the network connections setting. Select system you're configuring Go to IPv4 settings </p>
+
+<p>You you have to set up the ips address for gateway, domain name, and any subnet. Check connect automatically and available for all users.</p>
+
+<p>Via the terminal 1. ifconfig <interface> address 2. ifconfig <interface> netmask addr 3. ifcongig <interface> gateway addr 4. ifconfig <interface> subnet addr</p>
+
+<p></p>
+
+<p>Hosts and networks:</p>
+
+<p>Classes and Octet Range:</p>
+
+<p>A 0 - 126</p>
+
+<p>B 128 - 192.167</p>
+
+<p>C 192.169 - 223</p>
+
+<p>Never put a single 0 in any part of a ip address unless accompanied with a 1- i.e. 10 or 100/1.x.or 1xx</p>
+
+<p>Network types:</p>
+
+<p>Class A xxx.xxx.xx.xx</p>
+
+<p>Class B xxx.xx.x.x</p>
+
+<p>Class C xxx.xxx.x.xxx</p>
+
+<p>The third part of the IP address determines the network location of the IP.</p>
+
+<p>Note: Never disable STP unless you have a legitimate reason to. It's purpose is to prevent broadcast floods and layer 2 loops. Disabling it will cause your network to go down. One possible reason to disable it is because there are no possible loops in your network.</p>
