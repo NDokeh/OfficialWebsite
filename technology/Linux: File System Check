@@ -1,6 +1,4 @@
-File System Check System
-
-Utility for checking and repairing the files system inconsistence due to abnormal shutdown.
+The File System Check System is a utility for checking and repairing the files system inconsistence due to abnormal shutdown.
 
 It has 5 phases
 Phase 1 : Check block and size
