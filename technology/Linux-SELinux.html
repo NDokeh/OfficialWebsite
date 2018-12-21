@@ -1,37 +1,37 @@
-What is SELinux?
+<p>What is SELinux?</p>
 
-SELinux is a Mandatory Access control system for Linux.
+<p>SELinux is a Mandatory Access control system for Linux, a very roboust security system that is enabled by default in some Linux OS systems.</p> 
 
-Linux and Unix uses discretionary access control, as users have the ability to change permissions on their own files, and nothing will prevent other uses or process from accessing the contents of his home directory.
+<p>It has three enforcement levels. Enforcing, permissive, and disabled.</p> 
 
-In Mandatory Access Control systems, there is a policy which is administrative set and fixed. Even if you change the DAC settings on your home directory, if there is a policy in place which prevents another user or process from accessing it, you're generally safe. These policies can be very fine grained.  Policies can be set to determine access between users, files, directories, memoiry, sockets, tcp/udp ports...
+<p>The settings can be changed by vi /etc/sysconfig/selinux.</p>
 
-Targeted - default policy only targets processes are protected by SELliunx
+<p>Linux and Unix uses discretionary access control, as users have the ability to change permissions on their own files, and nothing will prevent other uses or process from accessing the contents of his home directory.</p>
 
-MLS - are called multi level/multiple category security: usually used in TLA government organizations.
+<p>In Mandatory Access Control systems, there is a policy which is administrative set and fixed. Even if you change the DAC settings on your home directory, if there is a policy in place which prevents another user or process from accessing it, you're generally safe. These policies can be very fine grained.  Policies can be set to determine access between users, files, directories, memoiry, sockets, tcp/udp ports...</p>
 
-You can determine what policy your system is set to use by looking at /etc/sysconfig/selinux. this can be checked via /usr/sbin/sestatus and checked via /usr/sbin/getenforce
+<p>Targeted - default policy only targets processes are protected by SELliunx</p>
 
-Two concepts of SELinux: Labeling and Type Enforcement
+<p>MLS - are called multi level/multiple category security: usually used in TLA government organizations.</p>
 
-A. Files, processes and ports are called laboed with a selinux context. For files and directorids. These lables are stories as extended attributes on the file sytem. For processes aport, the kernal manages these labels.
+<p>You can determine what policy your system is set to use by looking at /etc/sysconfig/selinux. this can be checked via /usr/sbin/sestatus and checked via /usr/sbin/getenforce<p>
 
-Labels are in this format: 
-user:role:type:level(option)
+<p>Two concepts of SELinux: Labeling and Type Enforcement</p>
 
-B. Type of enforcement is the part of the policy that says that processes  of the same name and  can only interact with the file of the same name and type.
+<p>A. Files, processes and ports are called laboed with a selinux context. For files and directorids. These lables are stories as extended attributes on the file sytem. For processes aport, the kernal manages these labels.</p>
 
-If you get an SELinux Error do not turn it off.
-It may mean the labeling is wrong: use the tools to fix the labels.
-Policy may need to be fixed via booleans and policy modules
-There could be a bug in the policy.
+<p>Labels are in this format: user:role:type:level(option)</p>
 
-Booleans are on and off switches from simple stuff to complex stuff. To see all booleans, run getsebool -a
+<p>B. Type of enforcement is the part of the policy that says that processes  of the same name and  can only interact with the file of the same name and type.</p>
+-------------
+Trobleshooting
+<p>If you get an SELinux Error, do not turn SELinux off. It may mean the labeling is wrong: use the tools to fix the labels. Policy may need to be fixed via booleans and policy modules. There is a possiblity that there could be a bug in the policy.</p>
 
-To set a boolean, run setsebool [boolean] [0|1]  To make it permanment, pass the -P argument to setsebool
+<p>Booleans are on and off switches from simple stuff to complex stuff. To see all booleans, run getsebool -a</p>
 
-On any machiens you will be developing policy modules on: install setroubleshoot-server on machines you'll be developing policy modules on. They will install a bunch of tolls to help diagnose and fix SELiunux issues. After you isntall it, reboot or restart auditd after you install.
+<p>To set a boolean, run setsebool [boolean] [0|1]  To make it permanment, pass the -P argument to setsebool</p>
 
-Booleans.local file
-/etc/selinux/targeted/modyles/actuve
+<p>On any machiens you will be developing policy modules on: install setroubleshoot-server on machines you'll be developing policy modules on. They will install a bunch of tolls to help diagnose and fix SELiunux issues. After you isntall it, reboot or restart auditd after you install.</p>
+
+<p>FYI The Booleans.local file can be found at:/etc/selinux/targeted/modyles/active</p>
 
