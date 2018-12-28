@@ -1,0 +1,188 @@
+Ping - Tests that an internet host is reachable
+
+sudo /etc/init.d/networking – allows you to stop, start, and retart as arguments,; controls network status.
+
+dig
+
+Dig makes DNS queries
+
+syntax: dig TYPE domain.com
+
+This lets you choose which DNS record to query for
+
+There are several types to try but A will be the default if you use dig without specifiying an option.
+
+There are other TYPES to try such as SRV, MX, TXT, AAAA…
+
+You can also use dig to pick which DNS server to query. 
+
+Syntax: dig @8.8.8.8 
+
+Now the 4 8s are used as a example. It's useful if your systyem DNS is malfuctioning.
+
+Dig +trace domain
+
+traces how you domain gets resolved, starting at the root namedservers
+
+dig -x makes a reverse DNS query – find which domain resolves to an IP
+
+dig +short domain
+
+dig prints lot of output, but with +short it justs prints the IP address/value of the DNS record. 
+
+nslookup
+
+infconfig is to adminsiter a tcp/ip network interface
+
+ngrep - 
+
+nftables/iptables – Allows you to set up firewalls and NAT
+
+ip – Configures interfaces, routes, and more. Lets you view and change network configuration.
+
+Ip Object command
+
+OBJECT : addr, link neigh, etc
+
+COMMAND: add, show, delete, etc
+
+ip addr listening
+ip route listening
+ip netns
+ip link
+ip neigh
+ip xfrm
+ip -s link
+ip route list
+
+arp – Allows you to see your ARP table
+
+ethtool
+
+nc
+
+wireshark 
+
+netcat allows you to make a http request by hand. This is done via a file and can get a respone back with a bunch of HTML. 
+
+This can be done to send hugge files over a locak netowkr quickly.
+
+netstat/ss
+Netstat is a tool for tracking network connections in the system. Often used for troubleshooting security and day to day network problems/ Netstat focus is more on network security. 
+
+By default (with no parameters), netstat will provide all established connections for both
+network and domain sockets. That means we’ll see not only the connections that are actually working
+over the network, but also the interprocess communications
+
+One purpose for the netstat command is to determine what services are enabled on your servers.
+
+Do we need the service? The answer to this question is important. In most situations, you
+should be able to disable a great number of services that start up by default. A stand-alone
+web server, for example, should not need to run Network File System (NFS).
+If we do need the service, is the default setting secure? This question can also help you
+eliminate some services—if they aren’t secure and they can’t be made secure, then chances
+are they should be removed. For example, if remote login is a requirement and Telnet is the
+service enabled to provide that function, then an alternative such as SSH should be used
+instead, due to Telnet’s inability to encrypt login information over a network. (By default,
+most Linux distributions ship with Telnet disabled and SSH enabled.)
+Does the software providing the service need updates? All software needs updates from time
+to time, such as that on web and FTP servers. This is because as features get added, new
+security problems creep in. So be sure to remember to track the server software’s
+development and get updates as necessary.
+
+tc
+
+iw – set up wifi from the command line
+
+traceroute/mtr
+
+tcpdump – to dump traffic on a network. It captures network traffic and prints it out for you. 
+
+Everyline of a tcpdump output represenats a packet.
+
+Syntax
+
+tcpdump option any port 53
+
+example: tcpdump -n -i any port 53
+
+-i
+
+-a Prints out the packets contents
+
+-n will will force tcpdump to always print out the IP address. Normally tcp will transalte the ip addresses to host names
+
+-e This incluide ethernet information. This shwos you the MAC Address that the packet came from.
+
+
+nmap – network mapper
+
+nmap
+The nmap program can be used to scan a host or a group of hosts to look for open TCP and UDP
+ports. nmap can go beyond scanning and can actually attempt to connect to the remote listening
+applications or ports so that it can better identify the remote application.
+
+telnet – bad idea
+
+network managger
+
+whois  – Look up a domain
+
+Syntax: whois
+
+To query domain on given whois server whois -h whois.nic.cz seznam.cz
+
+To check who wons current IP address/domain: who IP/whois domain
+
+ssh – Secure Shell
+
+route allows you to examine and confugre the hosts rotuing table
+
+lsof
+
+sysctl
+
+socat
+
+openvpn
+
+Iptables lets you create rules to match network packets and to accept/drop/ or modify them. 
+
+It's often used for firewalls or to do NAT.
+
+in Iptables, tables have chains. And chains ahev rules
+
+tables: filter, nat, mangle, raw, security,
+chains: INPUT, FORWARD, PREROUTING, etc
+rules: i.e. -s 10.0.0.0/8 -j DROP
+
+iptable-save:
+
+This prints out all the iptables rules. You can restore them with iptables-restore, but it's also the easiest way to view all the rules
+
+-j target
+
+Every iptables rule has a target (what to do with matching packet). Options:
+
+ACCEPT/DROP/RETURN
+The name of an iptales chain
+An extension (man iptables-extensions) Popular ones inclide: DNAT, LOG, MASQUERADE
+
+tables have different chains:
+
+filter: Input/output/forward
+mangle:input/output/forward/prerouyting/postrouting
+nat:output/prerouting/postrouting
+
+It helps to learn when packets get processed by a given table/chain leg
+
+fil;ter←-- OUTPUT = all locally genenrated packets)
+
+you can match lots of packet attributes
+
+-s: src ip
+-d: dst ip
+
+-p: tcp/udp
+
+-i: network interfaces
