@@ -1,0 +1,141 @@
+Process Management
+
+Managing system processes is a common task for any linux system administator. It's necessary on how to use the commands that display information for all active process on the system and how to terminate an active or deadlocked process.
+
+The ps command shows which processes are running.  ps command lists all of the processes in a system, their state, size, name, owner, CPU time, wall clock time, and much more. 
+
+Syntax is as follows
+
+ps [any options]
+
+It can also be run as follows ps aux
+
+u means include username column, and a + x together shows all processes.
+
+-a shows all processes with a controlling terminal, not just the current users processes.
+
+-r Shows only running processes
+
+-x Shows processes that do not have a controlling termnal
+
+-u Shows the process owners
+
+-f Displays parent/child relationships among processes
+
+-l Produces a list in long format.
+
+-w Shows a process's command-line parameters
+
+-ww Shows a process's command-line parameters (unlimited width fashion)
+
+Please note that ps has 3 different sets of command line arguments depending on systmem
+
+no dashes for BSD Linux systems
+1 dash for UNIX Linux Systems
+2 dashes for GNU
+
+The most common set of parameters used with the ps command is -auxww. This show all the processes, each processes owners, and all the processes command line parameters.
+
+W is for wide, and ps auxwww will show all the command line args for each process. 
+
+E is for environment, ps auxe willl show the environment vars.
+
+F is for forest, ps auxf can show you a ascii art of a process tree.
+
+The pstree command can display a process tree as well.
+
+Also see: ps -ef or ps -el or pgrep or prstat
+
+What is unique is that you can choose which columns to show with ps. Wchan can tell you the name of the kernel function if the process is sleeping.
+
+This can be done with ps -eo, user, pid, wchan, and cmd
+
+Several process states: 
+
+R: running
+S/D: asleep
+Z: zombie
+l: multithreaded
++in the foreground
+
+So what is in a process in ps
+
+USER|PID|%CPU|%MEM|VSZ|RSS|TTY|STAT|START|TIME|COMMAND
+
+
+PID – categorized by number
+User and group – The user and group using the process
+Environment variables
+Signals Handlers
+Working directories – relative paths are relative to the working directory. Chdir changes it.
+Parent PID
+Command Line Arguments
+Open Files 
+Command line arguments 
+open files – And every open file has an offset
+memory (MEM)
+threads – sometimes one and soemtimes LOTS
+capabilities 
+namespaces
+
+System calls
+
+The Linux kernal has code to do a lot of things: Read from a hard drive, create new processes, change file permissions, make network connections, kill process, and keyboard drivers. A program does not know how to do these things. Programs ask linux to do work for them using suytem calls. 
+
+A system call is a fundamental interface between a application and linux kernel. It's processed by a application program to get the operating sytem to perform a srervice for it.
+
+To look at a system calls being made by a process is to use the strace command. The command traces system calls and signals ebtween the application and kernel.
+
+Every program uses system calls like python, java, and c programs. And every system call has a number like chmod has #90. So what is actually going on when you change a files permissions. You can see which system calls a program isusing which a command calls strace.
+
+Example: strace ls /tmp
+
+Using the strace command will allow you to see every system call 'ls' uses.
+
+Be aware that the command has a high overhead, so do not runit on your production database.
+
+Linux supports the concept of sending software signals to a process. 
+
+You have used signals if you ever used the kill command in linux. Every program has an action it does for every signal. Some include terminate, ignore, custom handler, and core dump. 
+
+The Linux kernel sends your process signals in losts of situations. You can send signals yourself with the skill system call or command.
+
+There are three levels of “kill”
+
+SIGINT ctrl -c   (SIGNIT 2)
+SIGTERM kill (SIGTERM 15)
+and
+SIGKILL kill -HUP (SIGHUP 1)
+
+Kill sends sigterm by default. But kill -9 sends sigkill.
+
+There is also SIGHUP which is often interpreted as “reload config”, eg by nginx.
+
+Every signal has a default action one of ignore, kill process, kill process AND make core dump file, stop process and resume process. Your program can set custom handlers for almost any signal. And many programs do.However SIGTOP and SIGKILL can't be ignored. And When a program geta sigkill, the program dies completely. Signals can be hard to handle correctly since they can happen at anytime.
+
+
+The syntax for kill is as follows
+
+kill -SIGNAL PID
+
+example: kill HUP 9
+
+There is also killall
+
+example: killall firefox
+
+signals all processes called NAME for example firefox
+
+useful flags:
+
+-w wait for all signaled processed to die
+
+-i: ask before signalling
+
+pgreg prints PID of matching running programs
+
+pgrep fire would match firefox and firebird, but not bash programs
+
+pkill is the same as pgrep, but signals PIDs found:
+
+example: pkill -9 -f firefox
