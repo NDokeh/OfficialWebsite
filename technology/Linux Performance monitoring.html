@@ -1,0 +1,56 @@
+Performance monitoring
+
+iostat, vmstat, and netstat are the three most commonly used tools for performance monitoring in Linux Operating systems. These commands are built in with the operating system and are easy to use. iostat stands for input output statistics and reports statistics for i/o devices such as disk drives. vmstat gives the statistics for virtual Memory.  Finally, netstat gives network statistics.
+
+Input Output Statistics (iostat)
+
+iostat reports terminal and disk I/O activity and CPU utilization.  The first line of output is for the time period since boot  &  each subsequent line is for the prior interval. Kernel maintains a number of counters to keep track of the values.
+
+iostat's activity class options default to tdc  (terminal,  disk, and CPU). If any other option/s are specified,  this default is completely overridden i.e.  iostat -d will report only statistics about the disks.
+
+Syntax:
+Basic syntax is: iostat  <options>   [interval] [count]
+
+option - let you specify the device for which information is needed like disk , cpu or terminal. (-d, -c, -t or -tdc).  x options gives the extended statistics .
+
+interval -  is time period in seconds between two samples. iostat 4 will give data at each 4 seconds interval.
+
+count  - is the number of times the data is needed.  iostat 4 5 will give data at 4 seconds interval 5 times
+
+Virtual Memory Statistics (vmstat)
+
+vmstat reports virtual memory statistics of process, virtual memory, disk, trap, and CPU activity. On multicpu systems, vmstat averages the number of CPUs into the output. For per-process statistics. Without options, vmstat displays a one-line summary of the virtual memory activity since the system was booted.
+
+syntax:
+Basic syntax is vmstat <options>  [interval] [count]
+
+<option> - let you specify the type of information needed such as paging  -p, cache   -c, interrupt -i etc.
+if no option is specified information about process, memory, paging, disk, interrupts & cpu is displayed.
+
+[interval]  - is time period in seconds between two samples. vmstat  4  will give data at each 4 seconds interval.
+
+[count] - is the number of times the data is needed. vmstat 4 5 will give data at 4 seconds interval 5
+             times.
+
+
+
+Network Statistics (netstat)
+netstat displays the contents of various network-related data structures in depending on the options selected.
+
+Syntax: netstat  <option/s>
+
+Multiple options can be given at one time.
+
+Options
+ -a - displays the state of all sockets.
+ -r - shows the system routing tables
+ -i - gives statistics on a per-interface basis.
+-m - displays information from the network memory buffers. On Solaris, this shows statistics
+         forSTREAMS
+ -p [proto] - retrieves statistics for the specified protocol
+  -s - shows per-protocol statistics. (some implementations allow -ss to remove fileds with a value of 0 (zero) from the display.)
+ -D - display the status of DHCP configured interfaces. 
+-n do not lookup hostnames, display only IP addresses.
+-d (with -i) displays dropped packets per interface.
+-I [interface] retrieve information about only the specified interface.
+-v be verbose
