@@ -1,6 +1,13 @@
 Process Management
 
-Managing system processes is a common task for any linux system administator. It's necessary on how to use the commands that display information for all active process on the system and how to terminate an active or deadlocked process.
+Managing system processes is a common task for any linux system administrator. It's necessary on how to use the commands that display information for all active process on the system and how to terminate an active or deadlocked process.
+
+There are two types of processes in Linux
+
+1. User processes
+2. Processes that run in the background and perform task for the system. These are called daemons.
+
+ps
 
 The ps command shows which processes are running.  ps command lists all of the processes in a system, their state, size, name, owner, CPU time, wall clock time, and much more. 
 
@@ -50,11 +57,20 @@ What is unique is that you can choose which columns to show with ps. Wchan can t
 
 This can be done with ps -eo, user, pid, wchan, and cmd
 
-Several process states: 
+Several system process states: 
+
+Solaris
+
+O – Running – Process is running
+R -Runnable – Process is ready and is I the queue for running.
+S-Sleeping: The process is waiting for some even to completed
+T- Traced: The processed has been stopped, eithe rby a job control signal or because it's being traced.
+Z:-zombie – The process has ben terminated, and the parent process is not waiting; it is an undeaded dead process
+
 
 R: running
-S/D: asleep
-Z: zombie
+S/D: asleep – The process is waiting for some even to completed
+Z: zombie – The process has ben terminated, and the parent process is not waiting; it is an undeaded dead process
 l: multithreaded
 +in the foreground
 
@@ -111,7 +127,7 @@ Kill sends sigterm by default. But kill -9 sends sigkill.
 
 There is also SIGHUP which is often interpreted as “reload config”, eg by nginx.
 
-Every signal has a default action one of ignore, kill process, kill process AND make core dump file, stop process and resume process. Your program can set custom handlers for almost any signal. And many programs do.However SIGTOP and SIGKILL can't be ignored. And When a program geta sigkill, the program dies completely. Signals can be hard to handle correctly since they can happen at anytime.
+Every signal has a default action one of ignore, kill process, kill process AND make core dump file, stop process and resume process. Your program can set custom handlers for almost any signal. And many programs do. However SIGTOP and SIGKILL can't be ignored. And When a program geta sigkill, the program dies completely. Signals can be hard to handle correctly since they can happen at anytime.
 
 
 The syntax for kill is as follows
@@ -131,6 +147,10 @@ useful flags:
 -w wait for all signaled processed to die
 
 -i: ask before signalling
+
+
+
+Other things
 
 pgreg prints PID of matching running programs
 
